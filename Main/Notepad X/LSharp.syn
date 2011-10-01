@@ -14,8 +14,9 @@
     
     <!-- Keywords that can exist inside this block -->
     <Keywords>
-      <PatternGroup Name="Keywords" Style="Keyword" CaseSensitive="true">
+      <PatternGroup Name="Keywords" Style="Keyword" CaseSensitive="false">
         <Patterns>
+          null
           nil
           t
           true
@@ -33,6 +34,100 @@
           exit
           defevent
           defmacro
+          map
+          handle-event
+          defun
+          call
+          prl
+          pr
+          reference
+          using
+          car
+          cdr
+          caar
+          caaar
+          caadr
+          caddr
+          cadar
+          cddr
+          cdaar
+          cdadr
+          cdddr
+          cddr
+          defmethod
+          defclass
+          --
+          ++
+          and
+          `
+          '
+          call
+          compile
+          cond
+          do
+          each
+          for
+          foreach
+          if
+          let
+          macro
+          or
+          quote
+          setf
+          setq
+          the
+          to
+          trace
+          try
+          when
+          while
+          with
+          append
+          apply
+          assoc
+          coernce
+          cons
+          copy-list
+          %
+          environment
+          eq
+          eql
+          eval
+          evalstring
+          exit
+          first
+          gensym
+          handle-event
+          inspect
+          is
+          length
+          list
+          load
+          macroexpand
+          map
+          member
+          nconc
+          new
+          not
+          !=
+          nth
+          read
+          reset
+          rest
+          second
+          gui-inspect
+          symbol-name
+          third
+          throw
+          typeof
+          using
+          *readtable*
+          listp
+          *debugger*
+          *context*
+          *request*
+          *application*
+          *session*
         </Patterns>
       </PatternGroup>
       <PatternGroup Name="Numbers" Style="Numbers">
@@ -59,7 +154,7 @@
     </ChildBlocks>
   </Block>
   <Block Name="Multiline Comment" Style="Comment" EscapeChar="" IsMultiline="true">
-    <Scope Start="|" End="|" Style="Comment" Text="|...|"/>
+    <Scope Start="|" End="|#" Style="Comment" Text="|...|"/>
     <Operators>
       <PatternGroup name="URL" Style="URL">
         <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
@@ -76,14 +171,6 @@
   </Block>
   <Block Name="String (Double quotes)" Style="String" EscapeChar="" IsMultiline="false">
     <Scope Start="&quot;" End="&quot;" Style="String" />
-    <Operators>
-      <PatternGroup name="URL" Style="URL">
-        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
-      </PatternGroup>
-    </Operators>
-  </Block>
-  <Block Name="String (Single quotes)" Style="String" EscapeChar="" IsMultiline="false">
-    <Scope Start="'" End="'" Style="String" />
     <Operators>
       <PatternGroup name="URL" Style="URL">
         <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
