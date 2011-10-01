@@ -1,0 +1,35 @@
+﻿TODO:
+? #.   What Needs Done                             Directory for file(s)         Started 
+-----------------------------------------------------------------------------------------
+?  1.   Interactive Panes                          (Interactive Panes/)           No
+?  2.   Compiler (And run compiled?)               (Compiler/)                    [Don't Make]
+?  3.   Plugins (See Macro Advancement)            (Plugins/)                     Under Testing
+XA 4.   Macro Advancement                          ()                             [Always]
+   5.   User Guides up to date                     (Documents/)                   Yes
+A  6.   Better UI                                  ()                             [Always]
+X  7.   Fix/Upgrade Calculator                     (OnTop Forms/)                 Done
+   8.   Handle Single Application Calls things     ()                             Yes
+X  9.   BBCodes                                    [MenuItem]                     Done
+XP 10.  Spell Checker                              [Plugin]                       Done
+X  11.  Links to Sites in About                    [AboutBox1.vb]                 Done
+X  12.  Plugin Guide                               (Documents/)                   Done (Basic Documentation)
+   13.  Downloads                                  (./)                           Yes (2/3)
+X    1. Notepad X Updates                                                         Done (Application.Update)
+X    2. Plugin Updates                                                            Done
+?    3. Icons                                                                     No
+?  14.  Enable Icon Changing (with plugins)        ()                             No
+?  15.  Translations                               ()                             No
+X  16.  Set basic Plugins.ini to the [Plugins\]    ()                             Done
+X  17.  Put the basic plugins in the FTP site      [ftp.phx.nearlyfreespeech.org] Done
+X  18.  Change the Menus to Plugins                [Plugins]                      Done
+P    1. Calculator                                                                Done
+P    2. Decryption                                                                Done
+P    3. Encryption                                                                Done
+P    4. Dictionary                                                                Done
+X  19.  Plugin Templates                                                          Done
+   20.  Formatted Printing                         ()                             No
+
+-------------------GUIDE TO CHARACTERS--------------------------------------------------
+P = Plugin
+X = Done
+? = Maybe

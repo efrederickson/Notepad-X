@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PackageMaker
+</name>
+</assembly>
+<members>
+<member name="M:PackageMaker.PackFileInfoCollection.AddFile(System.String,System.String)">
+	<summary>
+ Add a file to the collection
+ </summary>
+	<param name="Path">File path</param>
+	<param name="ExtraPath">Extra Path for example \folder1, Can also be empty</param>
+</member><member name="M:PackageMaker.PackFileInfoCollection.AddFile(System.String)">
+	<summary>
+ Add a file to the collection
+ </summary>
+	<param name="Path">File path</param>
+</member><member name="M:PackageMaker.PackFileInfoCollection.AddDirectory(System.String,System.String)">
+	<summary>
+ Add all the files from a directory to the collection
+ </summary>
+	<param name="Directory">Directory path</param>
+	<param name="ExtraPath">Extra Path for example \folder1, Can also be empty</param>
+</member><member name="M:PackageMaker.PackFileInfoCollection.AddDirectory(System.String)">
+	<summary>
+ Add all the files from a directory to the collection
+ </summary>
+	<param name="Directory">Directory path</param>
+</member><member name="M:PackageMaker.PackFileInfoCollection.CreateFileInfo">
+	<summary>
+ Returns the file info string which will be used for the package
+ </summary>
+</member><member name="T:PackageMaker.PackFileInfoCollection">
+	<summary>
+ Collection for creating Packages
+ </summary>
+</member><member name="M:PackageMaker.Packages.Unpack(System.String,System.String)">
+	<summary>
+ Unpack the package file at the selected directory
+ </summary>
+</member><member name="M:PackageMaker.Packages.Pack(PackageMaker.PackFileInfoCollection,System.String)">
+	<summary>
+ Create an file pack , join all the files from PackFileInfoCollection into a single file
+ </summary>
+</member><member name="P:PackageMaker.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:PackageMaker.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:PackageMaker.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

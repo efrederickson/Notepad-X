@@ -1,0 +1,11 @@
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\EncryptionPlugin.dll
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\EncryptionPlugin.pdb
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\EncryptionPlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\EncryptionPlugin.AlwaysOnTopEncryptionForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\EncryptionPlugin.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\GenerateResource.read.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\GenerateResource.write.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\EncryptionPlugin.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\EncryptionPlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\EncryptionPlugin\obj\Debug\EncryptionPlugin.pdb

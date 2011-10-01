@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DictionaryPlugin
+</name>
+</assembly>
+<members>
+<member name="P:DictionaryPlugin.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DictionaryPlugin.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:DictionaryPlugin.My.Resources.Resources.data_ADJ">
+	<summary>
+  Looks up a localized string similar to .22 caliber|of or relating to the bore of a gun (or its ammunition) that measures twenty-two hundredths of an inch in diameter - "a .22 caliber pistol"
+.38 caliber|of or relating to the bore of a gun (or its ammunition) that measures thirty-eight hundredths of an inch in diameter - "a .38 caliber shell"
+.45 caliber|of or relating to the bore of a gun (or its ammunition) that measures forty-five hundredths of an inch in diameter
+a cappella|without musical accompaniment - "they sang an a cappella Mass"
+a  [rest of string was truncated]";.
+</summary>
+</member><member name="P:DictionaryPlugin.My.Resources.Resources.data_ADV">
+	<summary>
+  Looks up a localized string similar to a bit|to a small degree;somewhat - "it's a bit warm"
+a cappella|without musical accompaniment - "they performed a cappella"
+a fortiori|with greater reason;for a still stronger, more certain reason - "if you are wrong then, a fortiori, so am I"
+a la carte|by ordering items listed individually on a menu - "we ate a la carte"
+a la mode|with ice cream on top or on the side - "we served the apple pie a la mode"
+a lot|to a very great degree or extent - "I feel a lot better"
+a posteriori|derived from observe [rest of string was truncated]";.
+</summary>
+</member><member name="P:DictionaryPlugin.My.Resources.Resources.data_NOUN">
+	<summary>
+  Looks up a localized string similar to 15 May Organization|a terrorist organization formed in 1979 by a faction of the Popular Front for the Liberation of Palestine but disbanded in the 1980s when key members left to join a faction of al-Fatah
+18-karat gold|an alloy that contains 75 per cent gold
+1900s|the decade from 1900 to 1909
+22-karat gold|an alloy that contains 87 per cent gold
+24/7|uptime is 24 hours a day 7 days a week
+24-karat gold|100 per cent gold
+401-k plan|a retirement savings plan that is funded by employee contributions and  [rest of string was truncated]";.
+</summary>
+</member><member name="P:DictionaryPlugin.My.Resources.Resources.data_VRB">
+	<summary>
+  Looks up a localized string similar to abacinate|blind by holding a red-hot metal plate before someone's eyes - "The prisoners were abacinated by their captors"
+abandon|forsake, leave behind - "We abandoned the old car in the empty parking lot";give up with the intent of never claiming again;leave someone who needs or counts on you;leave in the lurch;stop maintaining or insisting on;of ideas or claims - "He abandoned the thought of asking for her hand in marriage"
+abate|become less in amount or intensity - "The storm will abate"
+abbreviate|sh [rest of string was truncated]";.
+</summary>
+</member><member name="P:DictionaryPlugin.My.Resources.Resources.DefinitionHTML">
+	<summary>
+  Looks up a localized string similar to &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+ &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+ 
+ &lt;style type="text/css"&gt;
+ body{
+ font-family:verdana,'sans serif';
+ font-size:11pt;
+ color:#000000;
+ background-color:#ffffff}
+ 
+ .word{
+ font-size:11pt;
+ font-weight:bold;
+ color:#0000cc;}
+ &lt;/style&gt;
+ 
+&lt;/head&gt;
+&lt;body&gt;
+
+
+.
+</summary>
+</member><member name="T:DictionaryPlugin.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

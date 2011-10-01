@@ -1,0 +1,11 @@
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\CalculatorPlugin.dll
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\CalculatorPlugin.pdb
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\CalculatorPlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.CalculatorForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\GenerateResource.read.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\GenerateResource.write.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.pdb

@@ -1,0 +1,11 @@
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\BBCodePlugin.dll
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\BBCodePlugin.pdb
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\BBCodePlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\BBCodePlugin.BBCodeMenu.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\BBCodePlugin.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\BBCodePlugin.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\BBCodePlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\BBCodePlugin\obj\Debug\BBCodePlugin.pdb

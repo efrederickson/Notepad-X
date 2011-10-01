@@ -1,0 +1,11 @@
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\SpellChecker.dll
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\SpellChecker.pdb
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\SpellChecker.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\SpellChecker.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\SpellChecker.Results.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\GenerateResource.read.8.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\GenerateResource.write.8.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\SpellChecker.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\SpellChecker.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SpellChecker\obj\Debug\SpellChecker.pdb

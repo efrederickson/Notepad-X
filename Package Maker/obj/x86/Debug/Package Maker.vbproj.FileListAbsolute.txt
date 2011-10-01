@@ -1,0 +1,13 @@
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\license.txt
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Package Maker.exe.config
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Package Maker.exe
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Package Maker.pdb
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Package Maker.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\PackageMaker.PackageForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\PackageMaker.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\GenerateResource.read.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\GenerateResource.write.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\Package Maker.exe
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\Package Maker.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Package Maker\obj\x86\Debug\Package Maker.pdb

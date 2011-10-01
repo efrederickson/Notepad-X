@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="Notepad X Macro" Startblock="NXM Code">
+<FileTypes>
+	<FileType Extension=".NXM" Name="Notepad X Macro"/>
+</FileTypes>
+	<Block Name="NXM Code" Style="NXM Code" EscapeChar="" IsMultiline="true">
+	<!--<Scope Start="do"  StartIsKeyword="true" End="end" EndIsKeyword="true"  Style="NXM Keyword" Text="..." CauseIndent="true"/>	
+		<Scope Start="function"  StartIsKeyword="true" End="end" EndIsKeyword="true"  Style="NXM Keyword" Text="..." CauseIndent="true"/>
+		<Scope Start="then" StartIsKeyword="true" End="end" EndIsKeyword="true"  Style="NXM Keyword" Text="..." CauseIndent="true"/>
+	-->
+		<Bracket Start="{" End="}" Style="NXM Code"/>
+		<Bracket Start="(" End=")" Style="NXM Code"/>
+		
+		<!-- Keywords that can exist inside this block -->
+		<Keywords>
+			<PatternGroup Name="Keywords" Style="NXM Keyword" CaseSensitive="true">
+				<Patterns>
+					save
+					open
+					exit
+					saveas
+					settext
+					resetText, appendFile [filename]
+				</Patterns>
+			</PatternGroup>
+			<PatternGroup Name="Numbers" Style="NXM Number">
+				<Pattern Text="(0x[0-9,a-f,A-F]+)" IsComplex="true" />
+				<Pattern Text="([0-9]+)" IsComplex="true" />
+			</PatternGroup>
+		</Keywords>
+		<!-- Operators that can exist inside this block -->
+		<Operators>
+			<PatternGroup name="Operators" Style="NXM Operator">
+				<Pattern Text="." />
+				<Pattern Text="%" />
+				<Pattern Text=":" />
+				<Pattern Text="^" />
+				<Pattern Text="*" />
+				<Pattern Text="/" />
+				<Pattern Text="+" />
+				<Pattern Text="-" />
+				<Pattern Text="=" />
+				<Pattern Text="&gt;" />
+				<Pattern Text="&lt;" />
+        <Pattern Text="&gt;=" />
+        <Pattern Text="&lt;=" />
+			</PatternGroup>
+		</Operators>
+		<!-- Blocks that can exist inside this block -->
+		<ChildBlocks>
+			<Child Name="NXM Multiline Comment" />
+			<Child Name="NXM Singleline Comment" />
+			<Child Name="NXM String1" />
+      <Child Name="NXM String2" />
+      <Child Name="NXM Multiline String" />
+      <Child Name="NXM Code" />
+		</ChildBlocks>
+	</Block>
+	<!--<Block Name="NXM Multiline Comment" Style="NXM Comment" EscapeChar="" IsMultiline="true">
+		<Scope Start="--[[" End="]]" Style="NXM Comment" Text="--[[...]]"/>
+		<Operators>
+			<PatternGroup name="URL" Style="NXM URL">
+				<Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+			</PatternGroup>
+		</Operators>
+	</Block>-->
+	<Block Name="NXM Singleline Comment" Style="NXM Comment" EscapeChar="" IsMultiline="false">
+		<Scope Start="--" End="" Style="NXM Comment" />
+    <Operators>
+      <PatternGroup name="URL" Style="NXM URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+	</Block>
+  <!--<Block Name="NXM Multiline String" Style="NXM String" EscapeChar="" IsMultiline="true">
+    <Scope Start="[[" End="]]" Style="NXM String" />
+    <Operators>
+      <PatternGroup name="URL" Style="NXM URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>-->
+  <Block Name="NXM String1" Style="NXM String" EscapeChar="" IsMultiline="false">
+    <Scope Start="&quot;" End="&quot;" Style="NXM String" />
+    <Operators>
+      <PatternGroup name="URL" Style="NXM URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+	<Block Name="NXM String2" Style="NXM String" EscapeChar="" IsMultiline="false">
+		<Scope Start="'" End="'" Style="NXM String" />
+    <Operators>
+      <PatternGroup name="URL" Style="NXM URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+	</Block>
+
+	<Style Name="NXM Code" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="NXM Scope" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="NXM Region" ForeColor="blue" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="NXM Comment" ForeColor="green" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="NXM String" ForeColor="darkred" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="NXM Number" ForeColor="magenta" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="NXM Operator" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="NXM Keyword" ForeColor="blue" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="NXM URL" ForeColor="blue" BackColor="" Bold="false" Italic="false" Underline="true" />
+</Language>

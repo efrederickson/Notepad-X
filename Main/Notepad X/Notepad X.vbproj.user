@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>ftp://ftp.phx.nearlyfreespeech.net/public/publish/|publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://elijah.awesome99.org/publish/|http://elijah.awesome99.org/publish/Application%2520Files/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://elijah.awesome99.org/publish/|http://192.168.7.104/Notepad%2520X/|http://192.168.7.104/mlnlover11Productions/Notepad%2520X/|http://localhost/Notepad X/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartArguments>
+    </StartArguments>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartAction>Project</StartAction>
+    <StartProgram>C:\Users\elijah.KINGDOM\Desktop\Notepad X\Notepad X\bin\Debug\Starter.bat</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

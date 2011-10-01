@@ -1,0 +1,180 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Library
+</name>
+</assembly>
+<members>
+<member name="M:Library.String.Permutation.Permute(System.String)">
+	<summary>
+ A String Permutation Function
+ </summary>
+	<param name="stringToPermute">This is the String to Permute</param>
+	<returns></returns>
+	<remarks>This may take a while, depending the strings Length, so I
+ recommend using a BackgroundWorker or a something of that sort
+ </remarks>
+</member><member name="T:Library.String.Permutation">
+	<summary>
+ A String Permutation Utility
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Library.String.StringFactorials.FindFactorialOfString(System.Int32)">
+	<summary>
+ Get the Maximum Permutation Count of a string (the Factorial)
+ </summary>
+	<param name="inputStringLength">the Length of a String</param>
+	<returns>The Permutation Count</returns>
+	<remarks></remarks>
+</member><member name="T:Library.String.StringFactorials">
+	<summary>
+ A Class to find a Strings maximum Permutations
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Library.Random.RandomStringGenerator.GenerateString(System.Int32)">
+	<summary>
+ The actual function that generates the Random String
+ </summary>
+	<param name="StrLength">The length of the Random String</param>
+	<returns>This is the random String</returns>
+	<remarks></remarks>
+</member><member name="T:Library.Random.RandomStringGenerator">
+	<summary>
+ A Random String Generator. Has a certain chance of being a CAPITAL letter.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Library.Random.RandomNumberGenerator.Generate(System.Int32,System.Int32)">
+	<summary>
+ This Generates the Number
+ </summary>
+	<param name="Minimum">The Minimum number</param>
+	<param name="Maximum">The Maximum number</param>
+	<returns>The randomized number</returns>
+	<remarks></remarks>
+</member><member name="T:Library.Random.RandomNumberGenerator">
+	<summary>
+ A Random Number Generator
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Library.Random.RandomDateGenerator.Generate(System.DateTime,System.DateTime)">
+	<summary>
+ The Function that generates the Date
+ </summary>
+	<param name="mindate">The Minimum Date</param>
+	<param name="maxDate">The Maximum Date</param>
+	<returns>The Randomized Date</returns>
+	<remarks></remarks>
+</member><member name="T:Library.Random.RandomDateGenerator">
+	<summary>
+ A Random Date Generator
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Library.Controls.ProgressBar">
+	<summary>
+ This is a Progress Bar, From ProgBarPlus. 
+ Originally Created by Scott Snyder. 
+ Remixed by mlnlover11.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Library.Collections.FIFOList">
+	<summary>
+ A Simple "Reverse" Queue.
+ It acts as a First-in-first-out List(Of Object)
+ </summary>
+	<remarks><see cref="T:System.Collections.Queue">Based off of Queue</see></remarks>
+</member><member name="T:Library.Controls.DropdownColorBlender">
+	<summary>
+ A DropDown ColorBlender From ProgBarPlus. (To only be used when ProgressBar calls it!)
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Controls.TaskbarNotifier.TaskbarStates">
+	<summary>
+ List of the different popup animation status
+ </summary>
+</member><member name="M:Controls.TaskbarNotifier.#ctor">
+	<summary>
+ The Constructor for TaskbarNotifier
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.TaskbarState">
+	<summary>
+ Get the current TaskbarState (hidden, showing, visible, hiding)
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.TitleText">
+	<summary>
+ Get/Set the popup Title Text
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.ContentText">
+	<summary>
+ Get/Set the popup Content Text
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.NormalTitleColor">
+	<summary>
+ Get/Set the Normal Title Color
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.HoverTitleColor">
+	<summary>
+ Get/Set the Hover Title Color
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.NormalContentColor">
+	<summary>
+ Get/Set the Normal Content Color
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.HoverContentColor">
+	<summary>
+ Get/Set the Hover Content Color
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.NormalTitleFont">
+	<summary>
+ Get/Set the Normal Title Font
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.HoverTitleFont">
+	<summary>
+ Get/Set the Hover Title Font
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.NormalContentFont">
+	<summary>
+ Get/Set the Normal Content Font
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.HoverContentFont">
+	<summary>
+ Get/Set the Hover Content Font
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.KeepVisibleOnMousOver">
+	<summary>
+ Indicates if the popup should remain visible when the mouse pointer is over it.
+ Added Rev 002
+ </summary>
+</member><member name="P:Controls.TaskbarNotifier.ReShowOnMouseOver">
+	<summary>
+ Indicates if the popup should appear again when mouse moves over it while it's disappearing.
+ Added Rev 002
+ </summary>
+</member><member name="M:Controls.TaskbarNotifier.SetCloseBitmap(System.Drawing.Image,System.Drawing.Color,System.Drawing.Point)">
+	<summary>
+ Sets the 3-State Close Button bitmap, its transparency color and its coordinates
+ </summary>
+	<param name="image">Image/Bitmap object which represents the 3-state Close button Bitmap (width must be a multiple of 3)</param>
+	<param name="transparencyColor">Color of the Bitmap which won't be visible</param>
+ /// <param name="position">Location of the close button on the popup</param>
+</member><member name="T:Controls.TaskbarNotifier">
+	<summary>
+ TaskbarNotifier allows to display MSN style/Skinned instant messaging popups
+ </summary>1
+
+</member>
+</members>
+</doc>

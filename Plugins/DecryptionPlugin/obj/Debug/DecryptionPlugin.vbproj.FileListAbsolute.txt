@@ -1,0 +1,11 @@
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\DecryptionPlugin.dll
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\DecryptionPlugin.pdb
+C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\DecryptionPlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\DecryptionPlugin.Decryption.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\DecryptionPlugin.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\DecryptionPlugin.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\DecryptionPlugin.xml
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\DecryptionPlugin\obj\Debug\DecryptionPlugin.pdb

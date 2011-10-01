@@ -1,0 +1,10 @@
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\license.txt
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\WeifenLuo.WinFormsUI.Docking.pdb
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Resources.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Strings.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.pdb

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{716557E3-7757-43C8-A4A2-38AA20C5D520}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuaScriptingPlugin</RootNamespace>
+    <AssemblyName>LuaScriptingPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Documents\Notepad X\Plugins\</OutputPath>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41998,42004,42025,42026,42029,42031</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41998,42004,42025,42026,42029,42031</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>Windows</MyType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chunk\Assignment.vb" />
+    <Compile Include="Chunk\BreakStmt.vb" />
+    <Compile Include="Chunk\Chunk.vb" />
+    <Compile Include="Chunk\DoStmt.vb" />
+    <Compile Include="Chunk\ExprStmt.vb" />
+    <Compile Include="Chunk\ForInStmt.vb" />
+    <Compile Include="Chunk\ForStmt.vb" />
+    <Compile Include="Chunk\Function.vb" />
+    <Compile Include="Chunk\IfStmt.vb" />
+    <Compile Include="Chunk\LocalFunc.vb" />
+    <Compile Include="Chunk\LocalVar.vb" />
+    <Compile Include="Chunk\RepeatStmt.vb" />
+    <Compile Include="Chunk\ReturnStmt.vb" />
+    <Compile Include="Chunk\Statement.vb" />
+    <Compile Include="Chunk\WhileStmt.vb" />
+    <Compile Include="Expr\Access.vb" />
+    <Compile Include="Expr\BaseExpr.vb" />
+    <Compile Include="Expr\BoolLiteral.vb" />
+    <Compile Include="Expr\Expr.vb" />
+    <Compile Include="Expr\FunctionBody.vb" />
+    <Compile Include="Expr\FunctionCall.vb" />
+    <Compile Include="Expr\FunctionValue.vb" />
+    <Compile Include="Expr\GroupExpr.vb" />
+    <Compile Include="Expr\KeyAccess.vb" />
+    <Compile Include="Expr\MethodCall.vb" />
+    <Compile Include="Expr\NameAccess.vb" />
+    <Compile Include="Expr\NilLiteral.vb" />
+    <Compile Include="Expr\NumberLiteral.vb" />
+    <Compile Include="Expr\Operation.vb" />
+    <Compile Include="Expr\OperatorExpr.vb" />
+    <Compile Include="Expr\OperTable.vb" />
+    <Compile Include="Expr\PrimaryExpr.vb" />
+    <Compile Include="Expr\StringLiteral.vb" />
+    <Compile Include="Expr\TableConstructor.vb" />
+    <Compile Include="Expr\Term.vb" />
+    <Compile Include="Expr\VariableArg.vb" />
+    <Compile Include="Expr\VarName.vb" />
+    <Compile Include="Library\ConsoleLib.vb" />
+    <Compile Include="Library\NotepadXLib.vb" />
+    <Compile Include="Library\PackagesLib.vb" />
+    <Compile Include="LuaValue\LuaNotepadXMDIParent.vb" />
+    <Compile Include="LuaValue\LuaAssembly.vb" />
+    <Compile Include="mainForm.Designer.vb">
+      <DependentUpon>mainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="Library\BaseLib.vb" />
+    <Compile Include="Library\FileLib.vb" />
+    <Compile Include="Library\IOLib.vb" />
+    <Compile Include="Library\MathLib.vb" />
+    <Compile Include="Library\OSLib.vb" />
+    <Compile Include="Library\script.vb" />
+    <Compile Include="Library\StringLib.vb" />
+    <Compile Include="Library\SystemLib.vb" />
+    <Compile Include="Library\TableLib.vb" />
+    <Compile Include="Library\WinFormsLib.vb" />
+    <Compile Include="LuaInterpreter.vb" />
+    <Compile Include="LuaValue\LuaBoolean.vb" />
+    <Compile Include="LuaValue\LuaError.vb" />
+    <Compile Include="LuaValue\LuaFunction.vb" />
+    <Compile Include="LuaValue\LuaMultiValue.vb" />
+    <Compile Include="LuaValue\LuaNil.vb" />
+    <Compile Include="LuaValue\LuaNumber.vb" />
+    <Compile Include="LuaValue\LuaString.vb" />
+    <Compile Include="LuaValue\LuaTable.vb" />
+    <Compile Include="LuaValue\LuaUserdata.vb" />
+    <Compile Include="LuaValue\LuaValue.vb" />
+    <Compile Include="Parser\Parser.vb" />
+    <Compile Include="Parser\ParserInput.vb" />
+    <Compile Include="Parser\Syntax\Access.vb" />
+    <Compile Include="Parser\Syntax\Args.vb" />
+    <Compile Include="Parser\Syntax\Assignment.vb" />
+    <Compile Include="Parser\Syntax\BaseExpr.vb" />
+    <Compile Include="Parser\Syntax\BoolLiteral.vb" />
+    <Compile Include="Parser\Syntax\BreakStmt.vb" />
+    <Compile Include="Parser\Syntax\Chunk.vb" />
+    <Compile Include="Parser\Syntax\DoStmt.vb" />
+    <Compile Include="Parser\Syntax\ElseifBlock.vb" />
+    <Compile Include="Parser\Syntax\Expr.vb" />
+    <Compile Include="Parser\Syntax\ExprStmt.vb" />
+    <Compile Include="Parser\Syntax\Field.vb" />
+    <Compile Include="Parser\Syntax\ForInStmt.vb" />
+    <Compile Include="Parser\Syntax\ForStmt.vb" />
+    <Compile Include="Parser\Syntax\Function.vb" />
+    <Compile Include="Parser\Syntax\FunctionBody.vb" />
+    <Compile Include="Parser\Syntax\FunctionCall.vb" />
+    <Compile Include="Parser\Syntax\FunctionName.vb" />
+    <Compile Include="Parser\Syntax\FunctionValue.vb" />
+    <Compile Include="Parser\Syntax\GroupExpr.vb" />
+    <Compile Include="Parser\Syntax\IfStmt.vb" />
+    <Compile Include="Parser\Syntax\ItemValue.vb" />
+    <Compile Include="Parser\Syntax\KeyAccess.vb" />
+    <Compile Include="Parser\Syntax\KeyValue.vb" />
+    <Compile Include="Parser\Syntax\LocalFunc.vb" />
+    <Compile Include="Parser\Syntax\LocalVar.vb" />
+    <Compile Include="Parser\Syntax\MethodCall.vb" />
+    <Compile Include="Parser\Syntax\NameAccess.vb" />
+    <Compile Include="Parser\Syntax\NameValue.vb" />
+    <Compile Include="Parser\Syntax\NilLiteral.vb" />
+    <Compile Include="Parser\Syntax\NumberLiteral.vb" />
+    <Compile Include="Parser\Syntax\OperatorExpr.vb" />
+    <Compile Include="Parser\Syntax\ParamList.vb" />
+    <Compile Include="Parser\Syntax\PrimaryExpr.vb" />
+    <Compile Include="Parser\Syntax\RepeatStmt.vb" />
+    <Compile Include="Parser\Syntax\ReturnStmt.vb" />
+    <Compile Include="Parser\Syntax\Statement.vb" />
+    <Compile Include="Parser\Syntax\StringLiteral.vb" />
+    <Compile Include="Parser\Syntax\TableConstructor.vb" />
+    <Compile Include="Parser\Syntax\Term.vb" />
+    <Compile Include="Parser\Syntax\Var.vb" />
+    <Compile Include="Parser\Syntax\VariableArg.vb" />
+    <Compile Include="Parser\Syntax\VarName.vb" />
+    <Compile Include="Parser\Syntax\WhileStmt.vb" />
+    <Compile Include="Parser\TextInput.vb" />
+    <Compile Include="Parser\TextParserCommon.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="Properties\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lua.Grammar.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Test\Ledger.wlua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\Test.lua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\WinFormExample.wlua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Main\Notepad X\Notepad X.vbproj">
+      <Project>{6BADBAAA-B3E2-4C9F-8927-2358C85DD9FE}</Project>
+      <Name>Notepad X</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
