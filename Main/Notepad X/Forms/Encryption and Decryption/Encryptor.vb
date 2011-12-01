@@ -82,7 +82,7 @@ Public Class Encryptor
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         args = System.Environment.GetCommandLineArgs
-        If args.Count = 2 Then
+        If args.Length = 2 Then
             TextBox1.Text = args(1)
         End If
     End Sub

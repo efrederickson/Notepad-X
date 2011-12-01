@@ -64,8 +64,8 @@ Public Class MDIParent
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        ToolStripStatusLabel.Text = "Documents: " & Me.DockPanel1.Documents.Count
-        If Me.DockPanel1.Documents.Count = 0 Then
+        ToolStripStatusLabel.Text = "Documents: " & Microsoft.VisualBasic.CompilerServices.Conversions.ToString(Me.DockPanel1.DocumentsCount)
+        If Me.DockPanel1.DocumentsCount = 0 Then
             ToolStripMenuItem1.Visible = False
             Me.Text = "Notepad X"
         Else
@@ -98,7 +98,7 @@ Public Class MDIParent
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveToolStripMenuItem.Click
-        If Me.DockPanel1.Documents.Count <> 0 Then
+        If Me.DockPanel1.DocumentsCount <> 0 Then
             Try
                 Dim frm As ITextEditorForm = CType(DockPanel1.ActiveContent, ITextEditorForm)
                 frm.Save()
@@ -142,7 +142,7 @@ Public Class MDIParent
     Private Sub CloseCurrentFormToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CloseCurrentFormToolStripMenuItem.Click
         If Me.DockPanel1.Documents.Count <> 0 Then
             CType(Me.DockPanel1.ActiveContent, Form).Close()
-        ElseIf Me.MdiChildren.Count = 0 Then
+        ElseIf Me.MdiChildren.Length = 0 Then
             Me.Close()
         End If
     End Sub
@@ -323,7 +323,7 @@ Public Class MDIParent
         ChildForm.Text = "Notepad X Window " & m_ChildFormNumber
         ChildForm.Show(DockPanel1)
 
-        If args.Count = 3 Then
+        If args.Length = 3 Then
             If args(2).ToLower() = "encrypt" Then
                 Dim frm As New Encryptor(args(1))
                 frm.ShowDialog()
@@ -342,13 +342,13 @@ Public Class MDIParent
                 ChildForm.open(args(1))
                 'ChildForm.Show(DockPanel1)
             End If
-        ElseIf args.Count = 2 AndAlso args(1) = "-h" Then
+        ElseIf args.Length = 2 AndAlso args(1) = "-h" Then
             helpForm.ShowDialog()
             End
-        ElseIf args.Count = 2 AndAlso args(1).ToLower.EndsWith(".nxm") Then
+        ElseIf args.Length = 2 AndAlso args(1).ToLower.EndsWith(".nxm") Then
             ChildForm.LoadMacro(args(1))
             'ChildForm.Show(DockPanel1)
-        ElseIf args.Count = 2 Then
+        ElseIf args.Length = 2 Then
             ChildForm.open(args(1))
             'ChildForm.Show(DockPanel1)
         End If

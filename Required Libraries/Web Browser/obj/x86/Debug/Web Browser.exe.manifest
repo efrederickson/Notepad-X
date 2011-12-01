@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Internet.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Web Browser" version="1.0.0.21993" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Web Browser" version="1.0.0.28500" language="neutral" processorArchitecture="msil" />
     <commandLine file="Web Browser.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,25 +44,25 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Web Browser.exe" size="101376">
-      <assemblyIdentity name="Web Browser" version="1.0.0.21993" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Web Browser" version="1.0.0.28500" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>u1s9m4QWjT7yWje3JFlNJUjizlI=</dsig:DigestValue>
+        <dsig:DigestValue>yAonjg1xd17neFPhcXr6iQt+wCU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WeifenLuo.WinFormsUI.Docking.dll" size="449536">
-      <assemblyIdentity name="WeifenLuo.WinFormsUI.Docking" version="2.5.0.23363" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="WeifenLuo.WinFormsUI.Docking" version="2.5.0.33463" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/toNVszpQvvu1cYcsGMxog3qJrw=</dsig:DigestValue>
+        <dsig:DigestValue>3BaRwBLLCTIfrrJTDsC0uHWzgI8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

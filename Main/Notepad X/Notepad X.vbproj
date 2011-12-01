@@ -18,6 +18,8 @@
     </TargetFrameworkProfile>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\elijah.FFHS2\AppData\Roaming\ICSharpCode/SharpDevelop4.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <PublishUrl>ftp://ftp.phx.nearlyfreespeech.net/public/publish/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -43,8 +45,6 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <SourceAnalysisOverrideSettingsFile>C:\Users\elijah.FFHS2\AppData\Roaming\ICSharpCode/SharpDevelop4.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -110,19 +110,14 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web">
       <HintPath>..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\System.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Document.vb" />
@@ -147,7 +142,9 @@
     <Compile Include="Forms\LSharpForm.Designer.vb">
       <DependentUpon>LSharpForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LSharpForm.vb" />
+    <Compile Include="Forms\LSharpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Macros.Designer.vb">
       <DependentUpon>Macros.vb</DependentUpon>
     </Compile>
@@ -191,7 +188,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="NotepadXPluginGenerator.vb" />
     <Compile Include="Packages\Packages.vb" />
     <Compile Include="INIFile.vb" />
     <Compile Include="Packages\FileListItem.vb" />
@@ -426,19 +422,17 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Elijah - Libraries\X Software Suite\LSharp\LSharp.Interpreter\LSharp.Interpreter.csproj">
+    <ProjectReference Include="..\..\..\..\..\..\Elijah - Libraries\LSharp\LSharp.Interpreter\LSharp.Interpreter.csproj">
       <Project>{8141886D-307B-4030-9320-8821B859AF66}</Project>
       <Name>LSharp.Interpreter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\LSharp.Compiler.csproj">
+    <ProjectReference Include="..\..\..\..\..\..\Elijah - Libraries\LSharp\LSharpCompilerConsole\LSharp.Compiler.csproj">
       <Project>{E429600B-B981-4F6D-A2EF-9BE2CD74F09A}</Project>
       <Name>LSharp.Compiler</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\Elijah - Libraries\X Software Suite\LSharp\LSharp\LSharp.csproj">
+    <ProjectReference Include="..\..\..\..\..\..\Elijah - Libraries\LSharp\LSharp\LSharp.csproj">
       <Project>{419E259F-E9C0-4E01-BA19-709FE84DEAD5}</Project>
       <Name>LSharp</Name>
     </ProjectReference>
@@ -454,6 +448,10 @@
       <Project>{BB0473A6-114A-4C70-BFA4-89B8B1415801}</Project>
       <Name>Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SnapOn\SnapOn\SnapOn.vbproj">
       <Project>{638000FB-9122-437D-A3CF-08DF00B69AC7}</Project>
       <Name>SnapOn %28SnapOn\SnapOn%29</Name>
@@ -461,10 +459,6 @@
     <ProjectReference Include="..\..\Required Libraries\Web Browser\Web Browser.vbproj">
       <Project>{0F782C94-10C8-4D42-8A0B-2F6479C0294A}</Project>
       <Name>Web Browser</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
-      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
-      <Name>WinFormsUI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -548,9 +542,7 @@
     <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Drawing" />
-    <Import Include="System.Linq" />
     <Import Include="System.Windows.Forms" />
-    <Import Include="System.Xml.Linq" />
     <Import Include="WeifenLuo.WinFormsUI.Docking" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

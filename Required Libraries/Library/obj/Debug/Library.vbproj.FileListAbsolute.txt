@@ -7,8 +7,8 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Lib
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Library.Controls.DropdownColorBlender.resources
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Resources.resources
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Library.Controls.ProgressBar.resources
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\GenerateResource.read.8.tlog
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\GenerateResource.write.8.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Library.dll
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Library.xml
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Required Libraries\Library\obj\Debug\Library.pdb

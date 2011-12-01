@@ -31,6 +31,7 @@ Public Class mainForm
         [in] = New StringReader(TextBox3.Text)
         Console.SetIn([in])
         Console.SetError(out)
+        Console.WriteLine("Lua has Hijacked Console.In, Console.Out, and Console.Err")
     End Sub
 
     Private Sub update_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles update.Tick

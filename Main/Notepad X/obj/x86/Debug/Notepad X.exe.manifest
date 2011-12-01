@@ -4,7 +4,7 @@
   <description asmv2:iconFile="NOTEPAD.ICO" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Notepad X" version="5.0.4287.26710" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Notepad X" version="5.0.4310.25728" language="neutral" processorArchitecture="msil" />
     <commandLine file="Notepad X.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,121 +44,121 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EncryptionLib.dll" size="29696">
-      <assemblyIdentity name="EncryptionLib" version="1.0.0.21993" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="EncryptionLib" version="1.0.0.33464" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ROnSc56U1GFx7UUURf9bpF1aLzA=</dsig:DigestValue>
+        <dsig:DigestValue>oSENgXzWo0DLlpVJEmxM2etsuVc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Library.dll" size="129024">
-      <assemblyIdentity name="Library" version="1.0.4281.21993" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Library" version="1.0.4290.33458" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>r9vnCLEx4/WkU2SnHAiYOUjbnus=</dsig:DigestValue>
+        <dsig:DigestValue>NmUS+4tsAdZZ5AxxrpTXV5IQgfs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="lsc.exe" size="49152">
-      <assemblyIdentity name="lsc" version="1.0.4286.25997" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="lsc" version="1.0.4294.27653" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7ICTyoa4oKBhIsnUrkmVyE0eASU=</dsig:DigestValue>
+        <dsig:DigestValue>3dbdk/JKdmqX0sVC+nWJJ8yziec=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LSharp.dll" size="90112">
-      <assemblyIdentity name="LSharp" version="1.3.4286.25995" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LSharp.dll" size="86016">
+      <assemblyIdentity name="LSharp" version="1.3.4294.27546" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yEt+b391/W4oiAzvFC0Sdr5jZKM=</dsig:DigestValue>
+        <dsig:DigestValue>kMeUel74OwryUisNSkL5qzEmPzM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="lsi.exe" size="49152">
-      <assemblyIdentity name="lsi" version="1.3.0.25996" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="lsi" version="1.3.0.27884" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>tPxGQ+/s8EBf39xg7jqiifY82SY=</dsig:DigestValue>
+        <dsig:DigestValue>1l+xG7ZgJVrDwY8NjzeP3NW55fI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Notepad X.exe" size="19821056">
-      <assemblyIdentity name="Notepad X" version="5.0.4287.26710" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Notepad X.exe" size="19819008">
+      <assemblyIdentity name="Notepad X" version="5.0.4310.25728" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>nkv/sqV7nXDm1mpKkvHoIxQBbgY=</dsig:DigestValue>
+        <dsig:DigestValue>hDNKlZ14JTeokOZVOd9u4zFpqOI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnapOn.exe" size="43520">
-      <assemblyIdentity name="SnapOn" version="1.0.4281.21993" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="SnapOn" version="1.0.4290.33459" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3nRPcuc2Hpg54Nyo04sj8B+kH08=</dsig:DigestValue>
+        <dsig:DigestValue>/XjBHksWbW9CEGBNuBH+n22IFME=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SyntaxBox.dll" size="380928">
-      <assemblyIdentity name="SyntaxBox" version="1.4.10.23374" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="SyntaxBox" version="1.4.10.33464" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VVaeWxMmmEV+BuNiGuSg+fRKbzo=</dsig:DigestValue>
+        <dsig:DigestValue>GCOvGGN1trfHiWsPwc2GT68t8Jo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Web Browser.exe" size="101376">
-      <assemblyIdentity name="Web Browser" version="1.0.0.21993" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Web Browser" version="1.0.0.25601" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>u1s9m4QWjT7yWje3JFlNJUjizlI=</dsig:DigestValue>
+        <dsig:DigestValue>ERR2CwOhPvF2re6NApiOmdUa7Kk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WeifenLuo.WinFormsUI.Docking.dll" size="449536">
-      <assemblyIdentity name="WeifenLuo.WinFormsUI.Docking" version="2.5.0.23363" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="WeifenLuo.WinFormsUI.Docking" version="2.5.0.33463" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/toNVszpQvvu1cYcsGMxog3qJrw=</dsig:DigestValue>
+        <dsig:DigestValue>3BaRwBLLCTIfrrJTDsC0uHWzgI8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -234,13 +234,13 @@
       <dsig:DigestValue>4C0Uw0szjuW4d6Yv4edXsyUmZeQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TODO.txt" size="2752">
+  <file name="TODO.txt" size="1237">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>FnlKg4ytXY7wG8iUDKZjGISCsoA=</dsig:DigestValue>
+      <dsig:DigestValue>JCHrqu4SJ8mptr2gC2P5nnTrnKo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

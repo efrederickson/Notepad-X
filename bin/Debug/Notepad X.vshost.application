@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Notepad X.exe.manifest" size="12314">
+    <dependentAssembly dependencyType="install" codebase="Notepad X.exe.manifest" size="12938">
       <assemblyIdentity name="Notepad X.exe" version="3.3.0.16" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>fDje34o42Ws4xErhWUmQ1OE3kcY=</dsig:DigestValue>
+        <dsig:DigestValue>ng470o2kRW5SSiOyGRK7aSOjwUI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

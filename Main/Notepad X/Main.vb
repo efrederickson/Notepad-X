@@ -31,14 +31,14 @@ Public Module Main
                 Dim Time As String = DateTime.Now.ToString & "> "
                 _log.WriteLine(Time & Text)
                 Debug.WriteLine(Time & Text)
-#If VERBOSE Then
+                #If VERBOSE Then
                 console.writeline(time & text)
-#End If
+                #End If
                 _log.Close()
             End Using
         End Sub
     End Class
-
+    
     Function Fix(ByVal str As String) As String
         Dim illegal() As Char = IO.Path.GetInvalidFileNameChars()
         For Each chara In illegal
@@ -46,7 +46,7 @@ Public Module Main
         Next
         Return str
     End Function
-
+    
     Sub InitializeLog()
         If Not Directory.Exists("C:\ProgramData\mlnlover11 Productions\Notepad X\") Then
             If Not Directory.Exists("C:\ProgramData\") Then Directory.CreateDirectory("C:\ProgramData")
@@ -64,9 +64,22 @@ Public Module Main
     
     Sub LoadLSharp()
         LSharpEnvironment.AssignLocal(LSharp.Symbol.FromName("*NotepadX*"), MDIParent1)
-        LSharpEnvironment.AssignLocal(Symbol.FromName("register-plugin"), New [Function](Function (args As Cons, env As LSharp.Environment)
-                                                                                           NotepadXLSharp.NotepadXPluginGenerator.CreateClass(args.First.ToString(), args.Rest())
-                                                                                       End Function))
+        LSharpEnvironment.AssignLocal(Symbol.FromName("register-plugin"), New [Function](Function (args As Cons, env As LSharp.Environment) As Boolean
+                                                                                             Return Main.GeneratePlugin(args)
+                                                                                         End Function))
         Runtime.EvalString("(using ""NotepadX"")", LSharpEnvironment)
+        Runtime.EvalString("(using ""NotepadX.Main"")", LSharpEnvironment)
     End Sub
+    
+    Public Function GeneratePlugin(args As Cons) As Boolean
+        ' args[0] = MenuItem (with event handlers already defined)
+        ' args[1] = path
+        ' Returns true if successful
+        Try
+            PluginManager.GetMenuItemFromString(CStr(args.Car()), CType(args.Cdar(), ToolStripMenuItem))
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+    End Function
 End Module

@@ -16,7 +16,7 @@ Inherits DockContent
 		' TODO : Add constructor code after InitializeComponents
 		'
 		Dim list As Alsing.SourceCode.SyntaxDefinitionList= new Alsing.SourceCode.SyntaxDefinitionList()
-        list.GetLanguageFromFile("LSharp.syn")
+        list.GetLanguageFromFile(Application.StartupPath & "\LSharp.syn")
         Dim l2 As System.Collections.Generic.List(Of Alsing.SourceCode.SyntaxDefinition)= list.GetSyntaxDefinitions()
         Dim def As Alsing.SourceCode.SyntaxDefinition = l2(0)
         syntaxDocument1.Parser.Init(def)

@@ -1,5 +1,4 @@
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\SamplePluginVB.dll
-C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\SamplePluginVB.pdb
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\SamplePluginVB.xml
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\SamplePluginVB.Resources.resources
@@ -7,4 +6,3 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\Generat
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\SamplePluginVB.dll
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\SamplePluginVB.xml
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\SamplePluginVB\obj\Debug\SamplePluginVB.pdb

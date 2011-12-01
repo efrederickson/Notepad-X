@@ -46,7 +46,7 @@ Partial Class LSharpForm
 	    'label1
 	    '
 	    Me.label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-	    Me.label1.Location = New System.Drawing.Point(12, 9)
+	    Me.label1.Location = New System.Drawing.Point(16, 8)
 	    Me.label1.Name = "label1"
 	    Me.label1.Size = New System.Drawing.Size(68, 20)
 	    Me.label1.TabIndex = 0
@@ -104,7 +104,7 @@ Partial Class LSharpForm
 	    Me.inputTextBox.InfoTipPosition = Nothing
 	    Me.inputTextBox.InfoTipSelectedIndex = 1
 	    Me.inputTextBox.InfoTipVisible = false
-	    Me.inputTextBox.Location = New System.Drawing.Point(86, 12)
+	    Me.inputTextBox.Location = New System.Drawing.Point(88, 8)
 	    Me.inputTextBox.LockCursorUpdate = false
 	    Me.inputTextBox.Name = "inputTextBox"
 	    Me.inputTextBox.ShowScopeIndicator = false
@@ -117,7 +117,7 @@ Partial Class LSharpForm
 	    Me.inputTextBox.SplitviewV = -4
 	    Me.inputTextBox.TabGuideColor = System.Drawing.Color.FromArgb(CType(CType(233,Byte),Integer), CType(CType(233,Byte),Integer), CType(CType(233,Byte),Integer))
 	    Me.inputTextBox.TabIndex = 5
-	    Me.inputTextBox.Text = "syntaxBoxControl1"
+	    Me.inputTextBox.TooltipDelay = 7
 	    Me.inputTextBox.WhitespaceColor = System.Drawing.SystemColors.ControlDark
 	    '
 	    'syntaxDocument1

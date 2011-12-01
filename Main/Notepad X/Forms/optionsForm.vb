@@ -377,7 +377,7 @@ Public Class optionsForm
         pb.Location = New Point(10, 10)
         Dim files() As String = Directory.GetFiles(Application.LocalUserAppDataPath & "\SyntaxDefinitions\")
         pb.Dock = DockStyle.Fill
-        pb.Maximum = files.Count
+        pb.Maximum = files.Length
         pb.Value = 0
         pb.TextShow = Library.Controls.ProgressBar.eTextShow.TextOnly
         For Each File In files
@@ -618,8 +618,8 @@ Public Class optionsForm
                 For Each _file In files2
                     Dim _hash() As String = PluginManager.GetPluginInfo(_file, PluginInterface)
                     If _hash IsNot Nothing Then
-                        ReDim Preserve files(files.Count) ' Adds 1 to end of the array
-                        files(files.Count) = _file
+                        ReDim Preserve files(files.Length) ' Adds 1 to end of the array
+                        files(files.Length) = _file
                         'exit, we found a possible plugin
                         Exit For
                     End If

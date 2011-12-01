@@ -46,7 +46,7 @@ Public Class TextEditor
         Else
             TextBox1.DetectUrls = False
         End If
-        selectedCharactersCountStatusLabel.Text = "Selected Characters: " & TextBox1.SelectedText.Count
+        selectedCharactersCountStatusLabel.Text = "Selected Characters: " & TextBox1.SelectedText.Length
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -300,8 +300,8 @@ Public Class TextEditor
                 Words.Add(word)
             End If
         Next
-        totalCharactersStatusLabel.Text = "Characters: " & TextBox1.Text.Count & ". Words: " & Words.Count
-        selectedCharactersCountStatusLabel.Text = "Selected Characters: " & TextBox1.SelectedText.Count
+        totalCharactersStatusLabel.Text = "Characters: " & TextBox1.Text.Length & ". Words: " & Words.Count
+        selectedCharactersCountStatusLabel.Text = "Selected Characters: " & TextBox1.SelectedText.Length
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenToolStripMenuItem.Click
@@ -780,8 +780,8 @@ _END:
             'encapsulating it all...
             Try
                 Dim bytes() = TextBox1.Text.Split(CChar(" "))
-                Dim bytes2(bytes.Count) As Byte
-                For i = 0 To bytes.Count - 1
+                Dim bytes2(bytes.Length) As Byte
+                For i = 0 To bytes.Length - 1
                     bytes2(i) = CByte(bytes(i))
                 Next
                 IO.File.WriteAllBytes(SaveFileDialog1.FileName, bytes2)

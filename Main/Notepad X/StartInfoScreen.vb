@@ -2,30 +2,30 @@
 Imports System.IO
 
 Public NotInheritable Class StartInfoScreen
-
+    
     Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-
+        
         ' Add any initialization after the InitializeComponent() call.
         Version.Text = String.Format("Version {0}.{1}.{2} Build {3}", My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         Copyright.Text = My.Application.Info.Copyright
         'totalProgressBar.SendToBack()
         'totalProgressBar.Dock = DockStyle.Fill
     End Sub
-
+    
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Dim wb As New Web_Browser.Form1()
         wb.Show()
         wb.NavigateTo("http://sourceforge.com/projects/notepadx")
     End Sub
-
+    
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         Dim wb As New Web_Browser.Form1()
         wb.Show()
         wb.NavigateTo("http://elijah.awesome99.org/index.php/notepad-x")
     End Sub
-
+    
     Private Sub BackgroundWorker1_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         BackgroundWorker1.ReportProgress(-5, 10)
         BackgroundWorker1.ReportProgress(-1, "Initializing Log...")
@@ -58,7 +58,7 @@ Public NotInheritable Class StartInfoScreen
             If Not IO.Directory.Exists(Application.LocalUserAppDataPath & "\Notepad X") Then
                 IO.Directory.CreateDirectory(Application.LocalUserAppDataPath & "\Notepad X\")
             End If
-
+            
             If Not IO.Directory.Exists(Application.LocalUserAppDataPath & "\Notepad X\Settings\") Then
                 IO.Directory.CreateDirectory(Application.LocalUserAppDataPath & "\Notepad X\Settings\")
             End If
@@ -128,7 +128,7 @@ Public NotInheritable Class StartInfoScreen
         ExtensionMods.SetBasicCommands(myName)
         BackgroundWorker1.ReportProgress(-1, "Initializing UI/Plugins...")
     End Sub
-
+    
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
         If e.ProgressPercentage = -1 Then
             progressLabel.Text = CStr(e.UserState)
@@ -138,11 +138,10 @@ Public NotInheritable Class StartInfoScreen
             totalProgressBar.Maximum = CInt(e.UserState) + 1
         End If
     End Sub
-
+    
     Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-    	MDIParent1 = New MDIParent()
-    	Dim args() As String = System.Environment.GetCommandLineArgs
-        MDIParent1.ProcessCommandLineArguments(args)
+        MDIParent1 = New MDIParent()
+        Dim args() As String = System.Environment.GetCommandLineArgs
         'MDIParent1 = Module1.IconManager.Check(MDIParent1)
         'MDIParent1 = Module1.LanguageManager.Check(MDIParent1)
         PluginManager = New PluginService(MDIParent1, NotepadX_DocumentPath & "\Plugins\Plugins.ini")
@@ -156,28 +155,35 @@ Public NotInheritable Class StartInfoScreen
         AddHandler MDIParent1.FormClosed, Sub()
                                               My.Settings.Save()
                                               Application.Exit()
-        End Sub
+                                          End Sub
         progressLabel.Text = "Loading L#..."
         Main.LoadLSharp()
-        MDIParent1.Show()
         Visible = False
+        MDIParent1.ProcessCommandLineArguments(args)
+        MDIParent1.Show()
     End Sub
-
+    
     Private Sub StartInfoScreen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         StartLoading()
     End Sub
-
+    
     Function AssemblyLoaded(ByVal sender As Object, ByVal e As AssemblyLoadEventArgs) As Object
         Log.WriteLine(String.Format("Loading '{0}'", e.LoadedAssembly.ManifestModule.Name))
         progressLabel.Text = String.Format("Loading '{0}'", e.LoadedAssembly.ManifestModule.Name)
         Return Nothing
     End Function
-
-    Sub StartLoading()
+    
+    Public Sub StartLoading()
         If String.IsNullOrWhiteSpace(My.Settings.DefaultSaveLocation) Or String.IsNullOrEmpty(My.Settings.DefaultSaveLocation) Then
             My.Settings.DefaultSaveLocation = NotepadX_DocumentPath & "\"
         End If
         'Module1.IconManager.LoadIcons(My.Settings.IconFile)
         BackgroundWorker1.RunWorkerAsync()
     End Sub
+    
+    Public WriteOnly Property LoadingMessage As string
+        Set (value As String)
+            progressLabel.Text = Value
+        End Set
+    End Property
 End Class

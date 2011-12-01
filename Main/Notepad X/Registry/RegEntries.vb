@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub RegEntries_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        For i = 0 To filetypes.Count - 1
+        For i = 0 To filetypes.Length - 1
             CheckedListBox1.Items.Add(filetypes(i))
             CheckedListBox1.SetItemChecked(i, True)
         Next

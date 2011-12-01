@@ -68,7 +68,7 @@ Public Class Decryptor
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         args = System.Environment.GetCommandLineArgs
-        If args.Count = 2 Then
+        If args.Length = 2 Then
             inputFileTextBox.Text = args(1)
         End If
     End Sub

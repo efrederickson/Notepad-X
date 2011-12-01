@@ -41,12 +41,12 @@ Partial Class helpForm
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabControl1.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.TabPage3.SuspendLayout
+        Me.TabPage4.SuspendLayout
+        Me.TabPage2.SuspendLayout
+        Me.SuspendLayout
         '
         'TabControl1
         '
@@ -76,7 +76,7 @@ Partial Class helpForm
         Me.TabPage1.Size = New System.Drawing.Size(425, 391)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Basic Help"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.UseVisualStyleBackColor = true
         '
         'Button2
         '
@@ -85,7 +85,7 @@ Partial Class helpForm
         Me.Button2.Size = New System.Drawing.Size(75, 37)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "View User Guide"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'Label2
         '
@@ -109,8 +109,8 @@ Partial Class helpForm
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(257, 31)
         Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Encryption: Use this to Encrypt your files for safety. Dont forget your encryptio" & _
-            "n code!!!"
+        Me.Label6.Text = "Encryption: Use this to Encrypt your files for safety. Dont forget your encryptio"& _ 
+        "n code!!!"
         '
         'Label5
         '
@@ -118,11 +118,11 @@ Partial Class helpForm
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(362, 27)
         Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Printing: Should work. If you have errors, let me know." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label5.Text = "Printing: Should work. If you have errors, let me know."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
+        Me.Label4.AutoSize = true
         Me.Label4.Location = New System.Drawing.Point(11, 34)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(216, 13)
@@ -131,7 +131,7 @@ Partial Class helpForm
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.Location = New System.Drawing.Point(11, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(262, 13)
@@ -149,7 +149,7 @@ Partial Class helpForm
         Me.TabPage3.Size = New System.Drawing.Size(425, 391)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Encryption/Decryption"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPage3.UseVisualStyleBackColor = true
         '
         'Label10
         '
@@ -165,9 +165,9 @@ Partial Class helpForm
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(219, 72)
         Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Decryption: Use this to Decrypt encrypted files. You can set Options->Decryption-" & _
-            ">Automatically Decrypt Files to decrypt when it opens them with the given decryp" & _
-            "tion code."
+        Me.Label8.Text = "Decryption: Use this to Decrypt encrypted files. You can set Options->Decryption-"& _ 
+        ">Automatically Decrypt Files to decrypt when it opens them with the given decryp"& _ 
+        "tion code."
         '
         'Label7
         '
@@ -175,9 +175,9 @@ Partial Class helpForm
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(222, 73)
         Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Encryption: Use this to keep your files secure.  You can set Options->Encrypton->" & _
-            "Automatically Encrypt Files to encrypt files when it saves them with the given e" & _
-            "ncryption code."
+        Me.Label7.Text = "Encryption: Use this to keep your files secure.  You can set Options->Encrypton->"& _ 
+        "Automatically Encrypt Files to encrypt files when it saves them with the given e"& _ 
+        "ncryption code."
         '
         'TabPage4
         '
@@ -188,7 +188,7 @@ Partial Class helpForm
         Me.TabPage4.Size = New System.Drawing.Size(425, 391)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "ETXT Files"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabPage4.UseVisualStyleBackColor = true
         '
         'Label9
         '
@@ -196,9 +196,9 @@ Partial Class helpForm
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(233, 123)
         Me.Label9.TabIndex = 0
-        Me.Label9.Text = "ETXT Files are encrypted text files. You can set Options->Decryption->Automatical" & _
-            "ly Decrypt ETXT Files, or when you open one, it will ask you for the encryption " & _
-            "code."
+        Me.Label9.Text = "ETXT Files are encrypted text files. You can set Options->Decryption->Automatical"& _ 
+        "ly Decrypt ETXT Files, or when you open one, it will ask you for the encryption "& _ 
+        "code."
         '
         'TabPage2
         '
@@ -209,17 +209,18 @@ Partial Class helpForm
         Me.TabPage2.Size = New System.Drawing.Size(425, 391)
         Me.TabPage2.TabIndex = 4
         Me.TabPage2.Text = "Code Editor"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TabPage2.UseVisualStyleBackColor = true
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.Location = New System.Drawing.Point(8, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(290, 26)
+        Me.Label1.Size = New System.Drawing.Size(290, 52)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "The Code Editor is a powerful code editing Text Box control." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can use it to e" & _
-            "dit over 40 languages."
+        Me.Label1.Text = "The Code Editor is a powerful code editing Text Box control."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"You can use it to e"& _ 
+        "dit over 40 languages."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Its very simple, just choose your language and extensi"& _ 
+        "on."
         '
         'Button1
         '
@@ -230,29 +231,28 @@ Partial Class helpForm
         Me.Button1.Size = New System.Drawing.Size(433, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Done"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'helpForm
         '
         Me.AcceptButton = Me.Button1
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Button1
         Me.ClientSize = New System.Drawing.Size(433, 417)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "helpForm"
-        Me.ShowIcon = False
+        Me.ShowIcon = false
         Me.Text = "Help"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.ResumeLayout(False)
-
+        Me.TabControl1.ResumeLayout(false)
+        Me.TabPage1.ResumeLayout(false)
+        Me.TabPage1.PerformLayout
+        Me.TabPage3.ResumeLayout(false)
+        Me.TabPage4.ResumeLayout(false)
+        Me.TabPage2.ResumeLayout(false)
+        Me.TabPage2.PerformLayout
+        Me.ResumeLayout(false)
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
