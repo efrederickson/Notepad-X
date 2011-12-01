@@ -5,6 +5,7 @@
 
     Public Sub Dispose() Implements SnapOn.IPlugin.Dispose
         frm.Close()
+        frm = Nothing
     End Sub
 
     Public ReadOnly Property DownloadURL As String Implements SnapOn.IPlugin.DownloadURL
