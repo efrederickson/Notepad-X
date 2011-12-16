@@ -45,10 +45,9 @@
     <EmbeddedResource Include="GoogleTranslateSidebarPlugin\Translate.resources" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Main\Notepad X\Notepad X.vbproj">
-      <Project>{6BADBAAA-B3E2-4C9F-8927-2358C85DD9FE}</Project>
+    <ProjectReference Include="..\..\Main\Notepad X\Notepad X.csproj">
+      <Project>{B3373EFE-70E2-4D86-A97C-28BF629DE7DF}</Project>
       <Name>Notepad X</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
       <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>

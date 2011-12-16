@@ -11,7 +11,7 @@ Imports Alsing.Windows.Forms
 ''' </summary>
 Public Class EditForm
     Inherits WeifenLuo.WinFormsUI.Docking.DockContent
-    Implements NotepadX.Plugins.ITextEditorForm
+    Implements IExtendFramework.Text.ITextEditor
 
     WithEvents components As IContainer
     Public Doc As Document
@@ -638,32 +638,92 @@ Public Class EditForm
         Me.Close()
     End Sub
 
-    Public Sub InsertText(ByVal text As String) Implements NotepadX.Plugins.ITextEditorForm.InsertText
-        sBox.Text.Insert(sBox.Text.Length, text)
+    Public ReadOnly Property DockingPanel() As WeifenLuo.WinFormsUI.Docking.DockContent Implements IExtendFramework.Text.ITextEditor.DockingPanel
+        Get
+            Return Me
+        End Get
+    End Property
+    
+    Public ReadOnly Property Extension() As IExtendFramework.Text.IFileExtension Implements IExtendFramework.Text.ITextEditor.Extension
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
+    
+    Public Property Filename() As String Implements IExtendFramework.Text.ITextEditor.Filename
+        Get
+            Throw New NotImplementedException()
+        End Get
+        Set
+            Throw New NotImplementedException()
+        End Set
+    End Property
+    
+    Public ReadOnly Property CurrentDocument() As IExtendFramework.Text.IDocument Implements IExtendFramework.Text.ITextEditor.CurrentDocument
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
+    
+    Public ReadOnly Property UndoBuffer() As Integer Implements IExtendFramework.Text.ITextEditor.UndoBuffer
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
+    
+    Public Function Create(FileName As String) As IExtendFramework.Text.ITextEditor Implements IExtendFramework.Text.ITextEditor.Create
+        Throw New NotImplementedException()
+    End Function
+    
+    Public Sub Undo() Implements IExtendFramework.Text.ITextEditor.Undo
+        Throw New NotImplementedException()
     End Sub
-
-    Public Sub OpenDocument(ByVal name As String) Implements NotepadX.Plugins.ITextEditorForm.OpenDocument
-        sBox.Text = IO.File.ReadAllText(name)
+    
+    Public Sub Redo() Implements IExtendFramework.Text.ITextEditor.Redo
+        Throw New NotImplementedException()
     End Sub
-
-    Public Sub Print() Implements NotepadX.Plugins.ITextEditorForm.Print
-        PrintToolStripMenuItem_Click(Nothing, EventArgs.Empty)
+    
+    Public Sub SaveAs() Implements IExtendFramework.Text.ITextEditor.SaveAs
+        Throw New NotImplementedException()
     End Sub
-
-    Public Sub Save() Implements NotepadX.Plugins.ITextEditorForm.Save
-        SaveToolStripMenuItem_Click(Nothing, EventArgs.Empty)
+    
+    Public Sub PrintPreview() Implements IExtendFramework.Text.ITextEditor.PrintPreview
+        Throw New NotImplementedException()
     End Sub
-
-    Public Sub SaveAs1() Implements NotepadX.Plugins.ITextEditorForm.SaveAs
-        Doc.Path = ""
-        SaveToolStripMenuItem_Click(Nothing, EventArgs.Empty)
+    
+    Public Sub PrintSetup() Implements IExtendFramework.Text.ITextEditor.PrintSetup
+        Throw New NotImplementedException()
     End Sub
-
-    Public Sub ShowPrintPreview() Implements NotepadX.Plugins.ITextEditorForm.ShowPrintPreview
-        MsgBox("Cannot Display a print preview for this document!", "Code Editor")
+    
+    Public Sub Cut() Implements IExtendFramework.Text.ITextEditor.Cut
+        Throw New NotImplementedException()
     End Sub
-
-    Public Sub ShowPrintSetup() Implements NotepadX.Plugins.ITextEditorForm.ShowPrintSetup
-        PrintSetupToolStripMenuItem_Click(Nothing, EventArgs.Empty)
+    
+    Public Sub Copy() Implements IExtendFramework.Text.ITextEditor.Copy
+        Throw New NotImplementedException()
+    End Sub
+    
+    Public Sub Paste() Implements IExtendFramework.Text.ITextEditor.Paste
+        Throw New NotImplementedException()
+    End Sub
+    
+    Public Sub Insert(index As Integer, text As String) Implements IExtendFramework.Text.ITextEditor.Insert
+        Throw New NotImplementedException()
+    End Sub
+    
+    Public Sub ChangeFont(newFont As System.Drawing.Font) Implements IExtendFramework.Text.ITextEditor.ChangeFont
+        Throw New NotImplementedException()
+    End Sub
+    
+    Public Sub ChangeColor(newColor As System.Drawing.Color) Implements IExtendFramework.Text.ITextEditor.ChangeColor
+        Throw New NotImplementedException()
+    End Sub
+    
+    Public Sub Open(filename As String) Implements IExtendFramework.Text.ITextEditor.Open
+        Throw New NotImplementedException()
+    End Sub
+    
+    Public Sub SelectAll() Implements IExtendFramework.Text.ITextEditor.SelectAll
+        Throw New NotImplementedException()
     End Sub
 End Class

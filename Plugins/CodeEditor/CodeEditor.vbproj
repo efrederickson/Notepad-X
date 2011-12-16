@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IExtendFramework">
+      <HintPath>..\..\..\..\Documents\SharpDevelop Projects\IExtendFramework\bin\Debug\IExtendFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -174,19 +177,13 @@
     <EmbeddedResource Include="Syntax\XML.syn" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Main\Notepad X\Notepad X.vbproj">
-      <Project>{6BADBAAA-B3E2-4C9F-8927-2358C85DD9FE}</Project>
+    <ProjectReference Include="..\..\Main\Notepad X\Notepad X.csproj">
+      <Project>{B3373EFE-70E2-4D86-A97C-28BF629DE7DF}</Project>
       <Name>Notepad X</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Required Libraries\Alsing.SyntaxBox\SyntaxBox.csproj">
       <Project>{19EF75B2-B414-4EB0-9486-160FAF93E62C}</Project>
       <Name>SyntaxBox</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Required Libraries\Library\Library.vbproj">
-      <Project>{BB0473A6-114A-4C70-BFA4-89B8B1415801}</Project>
-      <Name>Library</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
