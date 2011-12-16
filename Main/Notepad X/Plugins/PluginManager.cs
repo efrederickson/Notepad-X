@@ -95,7 +95,7 @@ namespace NotepadX.Plugins
 
                     //After we give the plugin a chance to tidy up, get rid of it
                     pluginOn.Instance = null;
-                } catch (Exception ex) {
+                } catch (Exception) {
                 }
             }
 
@@ -139,7 +139,7 @@ namespace NotepadX.Plugins
                     }
                 }
                 pluginAssembly = null;
-            } catch (Exception ex) {
+            } catch (Exception) {
                 ret = null;
             }
             return ret;

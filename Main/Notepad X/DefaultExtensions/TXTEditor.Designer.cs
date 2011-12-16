@@ -43,12 +43,17 @@ namespace NotepadX.DefaultExtensions
             // 
             // textBox1
             // 
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.AcceptsTab = true;
+            this.textBox1.AllowDrop = true;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(284, 262);
             this.textBox1.TabIndex = 0;
+            this.textBox1.WordWrap = false;
             // 
             // timer1
             // 

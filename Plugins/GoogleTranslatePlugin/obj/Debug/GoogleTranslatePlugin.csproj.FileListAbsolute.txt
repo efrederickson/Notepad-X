@@ -1,5 +1,0 @@
-C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\GoogleTranslatePlugin.dll
-C:\Users\elijah.FFHS2\Documents\Notepad X\Plugins\GoogleTranslatePlugin.pdb
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\GoogleTranslatePlugin\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\GoogleTranslatePlugin\obj\Debug\GoogleTranslatePlugin.dll
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\GoogleTranslatePlugin\obj\Debug\GoogleTranslatePlugin.pdb

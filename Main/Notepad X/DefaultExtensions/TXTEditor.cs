@@ -164,5 +164,21 @@ namespace NotepadX.DefaultExtensions
         {
             this.Text = Path.GetFileName(Filename);
         }
+        
+        public string DocumentText
+        {
+            get 
+            {
+                try {
+                    return textBox1.Text;
+                } catch (Exception) {
+                    return "";
+                }
+            }
+            set 
+            {
+                textBox1.Text = value;
+            }
+        }
     }
 }
