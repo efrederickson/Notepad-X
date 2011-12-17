@@ -45,7 +45,8 @@ namespace NotepadX.Macros
         
         private object ParseLine(string line, StringReader sr)
         {
-            string lline = line.ToLower();
+            string lline = line.ToLower().TrimStart();
+            line = line.TrimStart();
             // check for if-then/for/while/ etc.
             if (lline.StartsWith("for "))
                 return ParseForLoop(line, sr);
@@ -61,9 +62,7 @@ namespace NotepadX.Macros
                 return ParseFunction(line, sr);
             else if (lline.StartsWith("call "))
                 return ParseFunctionCall(line, sr);
-            else if (lline.StartsWith("do"))
-                return ParseDoStatement(line, sr);
-             else if (line.ToLower().Trim() == "true")
+            else if (line.ToLower().Trim() == "true")
                 return true;
             else if (line.ToLower().Trim() == "false")
                 return false;
@@ -81,19 +80,6 @@ namespace NotepadX.Macros
             } catch (Exception) { }
             
             return line;
-        }
-        
-        object ParseDoStatement(string line, StringReader sr)
-        {
-            line=sr.ReadLine();
-            List<object> PiEcEs = new List<object>();
-            while (line.ToLower().Trim() != "end")
-            {
-                PiEcEs.Add(ParseLine(line, sr));
-                line = sr.ReadLine();
-                lineNumber ++;
-            }
-            return new AST.DoStatement(PiEcEs);
         }
         
         object ParseFunctionCall(string line, StringReader sr)
@@ -132,7 +118,7 @@ namespace NotepadX.Macros
             sFunc = sFunc.Substring(sFunc.IndexOf("(") + 1);
             sFunc = sFunc.Substring(0, sFunc.IndexOf(")"));
             string[] argnames = sFunc.Split(',');
-            foreach (string arg in argnames) 
+            foreach (string arg in argnames)
             {
                 args.Add(arg);
             }

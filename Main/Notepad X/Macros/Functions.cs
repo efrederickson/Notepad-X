@@ -125,11 +125,14 @@ namespace NotepadX.Macros
         public static object MessageBox(Environment e, object[] args)
         {
             try {
-                System.Windows.Forms.MessageBox.Show(args[0] as string, "Notepad X");
-            } catch (Exception) {
-                return false;
+                if (e.GetObject(args[0].ToString()) != null)
+                    return System.Windows.Forms.MessageBox.Show(e.GetObject(args[0].ToString()).ToString(), "Notepad X");
+                else
+                    return System.Windows.Forms.MessageBox.Show(args[0] as string, "Notepad X");
+            } catch (Exception ex) {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
             }
-            return true;
         }
         
         public static object Calculate(Environment e, object[] args)

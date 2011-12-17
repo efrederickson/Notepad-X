@@ -38,7 +38,7 @@ namespace NotepadX.Macros.AST
         public override object Execute(Environment e, object[] args)
         {
             object o = null;
-            while (IExtendFramework.Converter.ObjectToBoolean(e.Run(new object[] {WhilePiece})) == true)
+            while (IExtendFramework.Converter.ObjectToBoolean(e.Run(new object[] {WhilePiece})))
             {
                 o = e.Run(Pieces.ToArray());
             }
@@ -63,14 +63,16 @@ namespace NotepadX.Macros.AST
         
         public override object Execute(Environment e, object[] args)
         {
+            var = var.Trim();
             int _v = 0;
             object o = null;
             e.Set(var, _v);
-            for (; int.Parse(e.GetObject(var).ToString()) < max; _v += incremental)
+            for (; _v < max; _v += incremental)
             {
                 e.Set(var, _v);
                 o = e.Run(Pieces.ToArray());
             }
+            e.Set(var, null);
             return o;
         }
     }
@@ -153,7 +155,6 @@ namespace NotepadX.Macros.AST
         public override object Execute(Environment e, object[] args)
         {
             // create the function
-            MessageBox.Show("adding function " + funcName);
             e.Set(funcName, new Function(Invoke));
             return null;
         }
@@ -186,19 +187,6 @@ namespace NotepadX.Macros.AST
             if (e.GetObject(fn) == null)
                 throw new Exception("Function '" + fn + "' not defined!");
             return (e.GetObject(fn) as Function)(e, this.args);
-        }
-    }
-    
-    public class DoStatement : Expression
-    {
-        public DoStatement(List<object> pieces)
-        {
-            this.Pieces = pieces;
-        }
-        
-        public override object Execute(Environment e, object[] args)
-        {
-            return e.Run(this.Pieces.ToArray());
         }
     }
 }
