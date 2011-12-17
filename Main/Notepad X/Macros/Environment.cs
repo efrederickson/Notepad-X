@@ -17,21 +17,38 @@ namespace NotepadX.Macros
     /// </summary>
     public class Environment
     {
+        public static Environment LastEnvironment;
+        
         Hashtable Objects = new Hashtable(); // key = value
         
         public Environment()
         {
             // set basic stuff
             Set("true", true);
-            Set("True", true);
             Set("false", false);
-            Set("False", false);
             Set("null", null);
             Set("nil", null);
-            Set("Nothing", null);
-            Set("T", true);
+            Set("nothing", null);
+            Set("t", true);
             
-            //TODO set basic functions
+            // set basic functions
+            Set("open", new Function(Functions.Open));
+            Set("save", new Function(Functions.Save));
+            Set("saveas", new Function(Functions.SaveAs));
+            Set("undo", new Function(Functions.Undo));
+            Set("redo", new Function(Functions.Redo));
+            Set("print", new Function(Functions.Print));
+            Set("printpreview", new Function(Functions.PrintPreview));
+            Set("printsetup", new Function(Functions.PrintSetup));
+            Set("name", new Function(Functions.Name));
+            Set("closecurrentwindow", new Function(Functions.CloseCurrentWindow));
+            Set("exit", new Function(Functions.Exit));
+            Set("end", new Function(Functions.Exit));
+            Set("messagebox", new Function(Functions.MessageBox));
+            Set("msgbox", new Function(Functions.MessageBox));
+            Set("calculate", new Function(Functions.Calculate));
+            
+            LastEnvironment = this;
         }
         
         public object Run(object[] Parsed)
@@ -39,22 +56,8 @@ namespace NotepadX.Macros
             object ret = null;
             foreach (object o in Parsed)
             {
-                if (o is WhileLoop)
-                    ret = ((WhileLoop)o).Execute(this, null);
-                if (o is ForLoop)
-                    ret = ((ForLoop)o).Execute(this, null);
-                if (o is IfStatement)
-                    ret = ((IfStatement)o).Execute(this, null);
-                if (o is SetVariable)
-                    ret = ((SetVariable)o).Execute(this, null);
-                if (o is DefineVariable)
-                    ret = ((DefineVariable)o).Execute(this, null);
-                if (o is DefinedFunction)
-                    ret = ((DefinedFunction)o).Execute(this, null);
-                if (o is FunctionCall)
-                    ret = ((FunctionCall)o).Execute(this, null);
-                if (o is MathFormula)
-                    ret = AdvancedMathProcesser.Calculate((o as MathFormula).Formula);
+                if (o is Expression)
+                    ret = ((Expression)o).Execute(this, null);
                 if (o is string)
                     ret = (string)o;
                 
@@ -63,25 +66,15 @@ namespace NotepadX.Macros
             return ret;
         }
         
-        public bool IsRunnable(object[] parsed)
-        {
-            //TODO
-            return true;
-        }
-        
         public object GetObject(string name)
         {
-            return Objects.ContainsKey(name) == true ? Objects[name] : null;
+            return Objects.ContainsKey(name.ToLower()) == true ? Objects[name] : null;
         }
         
         public void Set(string name, object val)
         {
-            Objects[name] = val;
+            Objects[name.ToLower()] = val;
         }
         
-        public void AddFunction(string name, Function f)
-        {
-            Objects[name] = f;
-        }
     }
 }

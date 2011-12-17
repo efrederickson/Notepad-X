@@ -8,6 +8,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace NotepadX.Macros.AST
 {
@@ -152,8 +153,8 @@ namespace NotepadX.Macros.AST
         public override object Execute(Environment e, object[] args)
         {
             // create the function
-            if (e.GetObject(funcName) == null)
-                e.AddFunction(funcName, new Function(Invoke));
+            MessageBox.Show("adding function " + funcName);
+            e.Set(funcName, new Function(Invoke));
             return null;
         }
         
@@ -173,25 +174,31 @@ namespace NotepadX.Macros.AST
     {
         // function name
         string fn;
-        
-        public FunctionCall(string fn)
+        string[] args;
+        public FunctionCall(string fn, string[] args)
         {
             this.fn = fn;
+            this.args = args;
         }
         
         public override object Execute(Environment e, object[] args)
         {
-            return (e.GetObject(fn) as Function)(e, args);
+            if (e.GetObject(fn) == null)
+                throw new Exception("Function '" + fn + "' not defined!");
+            return (e.GetObject(fn) as Function)(e, this.args);
         }
     }
     
-    public class MathFormula
+    public class DoStatement : Expression
     {
-        public string Formula;
-        
-        public MathFormula(string f)
+        public DoStatement(List<object> pieces)
         {
-            this.Formula = f;
+            this.Pieces = pieces;
+        }
+        
+        public override object Execute(Environment e, object[] args)
+        {
+            return e.Run(this.Pieces.ToArray());
         }
     }
 }
