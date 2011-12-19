@@ -255,6 +255,12 @@ namespace NotepadX.Plugins
                 else
                     MainForm.Instance.helpToolStripMenuItem.GetCurrentParent().Items.Insert(index, item);
                 return;
+            } else if (path.ToLower().StartsWith("macros")) {
+                if (index < MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Count)
+                    MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Add(item);
+                else
+                    MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Insert(index, item);
+                return;
             }
             if (index > MainForm.Instance.optionsToolStripMenuItem.GetCurrentParent().Items.Count)
                 MainForm.Instance.optionsToolStripMenuItem.GetCurrentParent().Items.Add(item);

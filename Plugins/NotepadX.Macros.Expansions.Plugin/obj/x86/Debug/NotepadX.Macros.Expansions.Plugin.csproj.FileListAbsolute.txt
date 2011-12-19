@@ -1,0 +1,8 @@
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NOTEPAD.ICO
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\file.txt
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\license.txt
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NotepadX.Macros.Expansions.Plugin.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NotepadX.Macros.Expansions.Plugin.pdb
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\NotepadX.Macros.Expansions.Plugin.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\NotepadX.Macros.Expansions.Plugin.pdb

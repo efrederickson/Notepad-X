@@ -138,7 +138,7 @@ namespace NotepadX.Macros
         public static object Calculate(Environment e, object[] args)
         {
             try {
-                return AdvancedMathProcesser.Calculate(args[0].ToString());
+                return IExtendFramework.Mathematics.AdvancedMathProcesser.Calculate(args[0].ToString());
             } catch (Exception) {
                 return null;
             }

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="LS 5.1" Startblock="LS Code">
+  <FileTypes>
+    <FileType Extension=".ls" Name="LSharp Script"/>
+  </FileTypes>
+
+  <Font Name="Courier New" Size="10" />
+  <Gutter Size="15" Style="Line Numbers" />
+
+  <Block Name="LS Code" Style="Plain Text" EscapeChar="" IsMultiline="true">
+    <Bracket Start="{" End="}" Style="Plain Text" MatchingStyle="Brace Matching"/>
+    <Bracket Start="[" End="]" Style="Plain Text" MatchingStyle="Brace Matching"/>
+    <Bracket Start="(" End=")" Style="Plain Text" MatchingStyle="Brace Matching"/>
+    
+    <!-- Keywords that can exist inside this block -->
+    <Keywords>
+      <PatternGroup Name="Keywords" Style="Keyword" CaseSensitive="false">
+        <Patterns>
+          null
+          nil
+          t
+          true
+          false
+          def
+          =
+          set
+          +
+          -
+          *
+          /
+          load
+          fn
+          spawn
+          exit
+          defevent
+          defmacro
+          map
+          handle-event
+          defun
+          call
+          prl
+          pr
+          reference
+          using
+          car
+          cdr
+          caar
+          caaar
+          caadr
+          caddr
+          cadar
+          cddr
+          cdaar
+          cdadr
+          cdddr
+          cddr
+          defmethod
+          defclass
+          --
+          ++
+          and
+          `
+          '
+          call
+          compile
+          cond
+          do
+          each
+          for
+          foreach
+          if
+          let
+          macro
+          or
+          quote
+          setf
+          setq
+          the
+          to
+          trace
+          try
+          when
+          while
+          with
+          append
+          apply
+          assoc
+          coernce
+          cons
+          copy-list
+          %
+          environment
+          eq
+          eql
+          eval
+          evalstring
+          exit
+          first
+          gensym
+          handle-event
+          inspect
+          is
+          length
+          list
+          load
+          macroexpand
+          map
+          member
+          nconc
+          new
+          not
+          !=
+          nth
+          read
+          reset
+          rest
+          second
+          gui-inspect
+          symbol-name
+          third
+          throw
+          typeof
+          using
+          *readtable*
+          listp
+          *debugger*
+          *context*
+          *request*
+          *application*
+          *session*
+        </Patterns>
+      </PatternGroup>
+      <PatternGroup Name="Numbers" Style="Numbers">
+        <Pattern Text="(0x[0-9,a-f,A-F]+)" IsComplex="true" />
+        <Pattern Text="([0-9]+)" IsComplex="true" />
+      </PatternGroup>
+    </Keywords>
+    <!-- Operators that can exist inside this block -->
+    <Operators>
+      <PatternGroup name="Operators" Style="Operator">
+        <Pattern Text="." />
+        <Pattern Text="%" />
+        <Pattern Text=":" />
+      </PatternGroup>
+    </Operators>
+    <!-- Blocks that can exist inside this block -->
+    <ChildBlocks>
+      <Child Name="Multiline Comment" />
+      <Child Name="Singleline Comment" />
+      <Child Name="String (Double quotes)" />
+      <Child Name="String (Single quotes)" />
+      <Child Name="Code" />
+      <Child Name="String (quasi quotes)" />
+    </ChildBlocks>
+  </Block>
+  <Block Name="Multiline Comment" Style="Comment" EscapeChar="" IsMultiline="true">
+    <Scope Start="|" End="|#" Style="Comment" Text="|...|"/>
+    <Operators>
+      <PatternGroup name="URL" Style="URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+  <Block Name="Singleline Comment" Style="Comment" EscapeChar="" IsMultiline="false">
+    <Scope Start=";" End="" Style="Comment" />
+    <Operators>
+      <PatternGroup name="URL" Style="URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+  <Block Name="String (Double quotes)" Style="String" EscapeChar="" IsMultiline="false">
+    <Scope Start="&quot;" End="&quot;" Style="String" />
+    <Operators>
+      <PatternGroup name="URL" Style="URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+  <Block Name="String (quasi quotes)" Style="String" EscapeChar="" IsMultiline="false">
+    <Scope Start="`" End="`" Style="String" />
+    <Operators>
+      <PatternGroup name="URL" Style="URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+  <Style Name="Plain Text" DefaultForeColor="black" ForeColor="black" DefaultBackColor="white" BackColor="white" Bold="false" Italic="false" Underline="false" />
+  <Style Name="Selected Text" DefaultForeColor="white" ForeColor="white" DefaultBackColor="navy" BackColor="navy" Bold="false" Italic="false" Underline="false" />
+  <Style Name="Line Numbers" DefaultForeColor="teal" ForeColor="teal" DefaultBackColor="white" BackColor="white" Bold="false" Italic="false" Underline="false" />
+  <Style Name="Brace Matching" DefaultForeColor="black" ForeColor="black" DefaultBackColor="white" BackColor="white" BorderColor="" Bold="true" Italic="false" Underline="false" />
+  <Style Name="Region" DefaultForeColor="blue" ForeColor="blue" DefaultBackColor="white" BackColor="white" Bold="true" Italic="false" Underline="false" />
+  <Style Name="Comment" DefaultForeColor="green" ForeColor="green" DefaultBackColor="white" BackColor="white" Bold="false" Italic="false" Underline="false" />
+  <Style Name="String" DefaultForeColor="darkred" ForeColor="darkred" DefaultBackColor="white" BackColor="white" Bold="false" Italic="false" Underline="false" />
+  <Style Name="Numbers" DefaultForeColor="black" ForeColor="magenta" DefaultBackColor="white" BackColor="white" Bold="true" Italic="false" Underline="false" />
+  <Style Name="Operator" DefaultForeColor="black" ForeColor="black" DefaultBackColor="white" BackColor="white" Bold="false" Italic="false" Underline="false" />
+  <Style Name="Keyword" DefaultForeColor="blue" ForeColor="blue" DefaultBackColor="white" BackColor="white" Bold="true" Italic="false" Underline="false" />
+  <Style Name="URL" DefaultForeColor="blue" ForeColor="blue" DefaultBackColor="white" BackColor="white" Bold="false" Italic="false" Underline="true" />
+</Language>

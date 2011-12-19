@@ -239,7 +239,7 @@ namespace NotepadX.Macros
             List<object> truePieces = new List<object>(), falsePieces = new List<object>();
             object decider;
             
-            string shortLine = ifLine.Substring("if".Length).Substring(0, ifLine.LastIndexOf(" then"));
+            string shortLine = ifLine.Substring("if".Length).Substring(0, ifLine.LastIndexOf("then") - 3);
             decider = ParseLine(shortLine, input);
             
             string line = input.ReadLine();

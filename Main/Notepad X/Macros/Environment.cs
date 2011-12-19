@@ -8,6 +8,7 @@
  */
 using System;
 using System.Collections;
+using System.Windows.Forms;
 using NotepadX.Macros.AST;
 
 namespace NotepadX.Macros
@@ -67,74 +68,101 @@ namespace NotepadX.Macros
                 {
                     object[] Os = o.ToString().Split('>');
                     try {
-                        int a = int.Parse(Os[0].ToString());
-                        int b = int.Parse(Os[1].ToString());
-                        ret = a > b;
-                    } catch (Exception ex) { throw new Exception("Error comparing numbers: " + ex.ToString());
+                        object a = Os[0].ToString();
+                        object b = Os[1].ToString();
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = int.Parse(a.ToString()) > int.Parse(b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("<"))
                 {
                     object[] Os = o.ToString().Split('<');
                     try {
-                        int a = int.Parse(Os[0].ToString());
-                        int b = int.Parse(Os[1].ToString());
-                        ret = a < b;
-                    } catch (Exception ex) { throw new Exception("Error comparing numbers: " + ex.ToString());
+                        object a = Os[0].ToString();
+                        object b = Os[1].ToString();
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = int.Parse(a.ToString()) < int.Parse(b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
                 if (o.ToString().Contains(">="))
                 {
                     object[] Os = o.ToString().Split(new string[] {">="} , StringSplitOptions.None);
                     try {
-                        int a = int.Parse(Os[0].ToString());
-                        int b = int.Parse(Os[1].ToString());
-                        ret = a >= b;
-                    } catch (Exception ex) { throw new Exception("Error comparing numbers: " + ex.ToString());
+                        object a = Os[0].ToString();
+                        object b = Os[1].ToString();
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = int.Parse(a.ToString()) >= int.Parse(b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("<="))
                 {
                     object[] Os = o.ToString().Split(new string[] {"<="} , StringSplitOptions.None);
                     try {
-                        int a = int.Parse(Os[0].ToString());
-                        int b = int.Parse(Os[1].ToString());
-                        ret = a <= b;
-                    } catch (Exception ex) { throw new Exception("Error comparing numbers: " + ex.ToString());
+                        object a = Os[0].ToString();
+                        object b = Os[1].ToString();
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = int.Parse(a.ToString()) <= int.Parse(b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("=>"))
                 {
                     object[] Os = o.ToString().Split(new string[] {"=>"} , StringSplitOptions.None);
                     try {
-                        int a = int.Parse(Os[0].ToString());
-                        int b = int.Parse(Os[1].ToString());
-                        ret = a >= b;
-                    } catch (Exception ex) { throw new Exception("Error comparing numbers: " + ex.ToString());
+                        object a = Os[0].ToString();
+                        object b = Os[1].ToString();
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = int.Parse(a.ToString()) >= int.Parse(b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("=<"))
                 {
                     object[] Os = o.ToString().Split(new string[] {"=<"} , StringSplitOptions.None);
                     try {
-                        int a = int.Parse(Os[0].ToString());
-                        int b = int.Parse(Os[1].ToString());
-                        ret = a <= b;
-                    } catch (Exception ex) { throw new Exception("Error comparing numbers: " + ex.ToString());
+                        object a = Os[0].ToString();
+                        object b = Os[1].ToString();
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = int.Parse(a.ToString()) <= int.Parse(b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
                 
                 if (o.ToString().Contains("="))
                 {
                     object[] Os = o.ToString().Split(new string[] {"="} , StringSplitOptions.None);
+                    object a = Os[0].ToString().Trim();
+                    object b = Os[1].ToString().Trim();
                     try {
-                        object a = Os[0];
-                        object b = Os[1];
-                        ret = a == b;
-                    } catch (Exception ex) { throw new Exception("Error comparing objects: " + ex.ToString());
+                        if (GetObject(a as string) != null)
+                            a = GetObject(a as string);
+                        if (GetObject(b as string) != null)
+                            b = GetObject(b as string);
+                        ret = (a.ToString() == b.ToString());
+                    } catch (Exception ex) { ret = false;
                     }
                 }
-                
             }
             return ret;
         }
