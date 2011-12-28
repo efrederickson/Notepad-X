@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion />
+    <SchemaVersion />
+    <ProjectGuid>{33813695-55E9-4DFB-B524-DAA218CB59C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CodeEditor</RootNamespace>
+    <AssemblyName>CodeEditor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <NoWarn>1591</NoWarn>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DocumentationFile>CodeEditor.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IExtendFramework">
+      <HintPath>..\..\..\..\Documents\SharpDevelop Projects\IExtendFramework\bin\Debug\IExtendFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code Editors\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code Editors\LanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code Editors\Style.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Document.cs" />
+    <Compile Include="main.cs" />
+    <Compile Include="My Project\AssemblyInfo.cs" />
+    <Compile Include="Syntax\LanguageList.cs" />
+    <Compile Include="Syntax\SyntaxDefinitionList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Code Editors\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code Editors\LanguageForm.resx">
+      <DependentUpon>LanguageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code Editors\Style.resx">
+      <DependentUpon>Style.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyntaxBox.dll" />
+    <EmbeddedResource Include="Syntax\ASP.syn" />
+    <EmbeddedResource Include="Syntax\AutoIt.syn" />
+    <EmbeddedResource Include="Syntax\Cobol.syn" />
+    <EmbeddedResource Include="Syntax\CPP.syn" />
+    <EmbeddedResource Include="Syntax\CSharp.syn" />
+    <EmbeddedResource Include="Syntax\CSS.syn" />
+    <EmbeddedResource Include="Syntax\DataFlex.syn" />
+    <EmbeddedResource Include="Syntax\Delphi.syn" />
+    <EmbeddedResource Include="Syntax\DOSBatch.syn" />
+    <EmbeddedResource Include="Syntax\Fortran90.syn" />
+    <EmbeddedResource Include="Syntax\FoxPro.syn" />
+    <EmbeddedResource Include="Syntax\Gemix.syn" />
+    <EmbeddedResource Include="Syntax\HTML.syn" />
+    <EmbeddedResource Include="Syntax\Java.syn" />
+    <EmbeddedResource Include="Syntax\JavaScript.syn" />
+    <EmbeddedResource Include="Syntax\JSP.syn" />
+    <EmbeddedResource Include="Syntax\Lang6502.syn" />
+    <EmbeddedResource Include="Syntax\LotusScript.syn" />
+    <EmbeddedResource Include="Syntax\Lua.syn" />
+    <EmbeddedResource Include="Syntax\MSIL.syn" />
+    <EmbeddedResource Include="Syntax\MySQL_SQL.syn" />
+    <EmbeddedResource Include="Syntax\Nemerle.syn" />
+    <EmbeddedResource Include="Syntax\NotepadXMacro.syn" />
+    <EmbeddedResource Include="Syntax\npath.syn" />
+    <EmbeddedResource Include="Syntax\Oracle_SQL.syn" />
+    <EmbeddedResource Include="Syntax\Perl.syn" />
+    <EmbeddedResource Include="Syntax\PHP.syn" />
+    <EmbeddedResource Include="Syntax\Povray.syn" />
+    <EmbeddedResource Include="Syntax\Python.syn" />
+    <EmbeddedResource Include="Syntax\rtf.syn" />
+    <EmbeddedResource Include="Syntax\SmallTalk.syn" />
+    <EmbeddedResource Include="Syntax\SqlServer2K.syn" />
+    <EmbeddedResource Include="Syntax\SqlServer2K5.syn" />
+    <EmbeddedResource Include="Syntax\SQLServer2K_SQL.syn" />
+    <EmbeddedResource Include="Syntax\SqlServer7.syn" />
+    <EmbeddedResource Include="Syntax\SQLServer7_SQL.syn" />
+    <EmbeddedResource Include="Syntax\SystemPolicies.syn" />
+    <EmbeddedResource Include="Syntax\Template.syn" />
+    <EmbeddedResource Include="Syntax\Text.syn" />
+    <EmbeddedResource Include="Syntax\TurboPascal.syn" />
+    <EmbeddedResource Include="Syntax\VB.syn" />
+    <EmbeddedResource Include="Syntax\VBNET.syn" />
+    <EmbeddedResource Include="Syntax\VBScript.syn" />
+    <EmbeddedResource Include="Syntax\VRML97.syn" />
+    <EmbeddedResource Include="Syntax\XML.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Main\Notepad X\Notepad X.csproj">
+      <Project>{B3373EFE-70E2-4D86-A97C-28BF629DE7DF}</Project>
+      <Name>Notepad X</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Required Libraries\Alsing.SyntaxBox\SyntaxBox.csproj">
+      <Project>{19EF75B2-B414-4EB0-9486-160FAF93E62C}</Project>
+      <Name>SyntaxBox</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

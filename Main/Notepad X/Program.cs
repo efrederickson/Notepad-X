@@ -8,6 +8,7 @@
  */
 using System;
 using System.Windows.Forms;
+using IExtendFramework.Plugins;
 using Microsoft.VisualBasic.ApplicationServices;
 
 namespace NotepadX
@@ -26,7 +27,6 @@ namespace NotepadX
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             MainForm mf = new MainForm();
-            mf.ProcessParameters(null, args);
             Application.Run(mf);
         }
         
@@ -36,6 +36,14 @@ namespace NotepadX
             this.EnableVisualStyles = true;
             this.ShutdownStyle = ShutdownMode.AfterMainFormCloses;
             this.StartupNextInstance += new StartupNextInstanceEventHandler(Program_StartupNextInstance);
+            this.Shutdown += delegate { 
+                foreach (NotepadX.Plugins.AvailablePlugin p in NotepadX.MainForm.PluginManager.AvailablePlugins)
+                {
+                   bool a = p.Instance.Dispose();
+                   if (!a)
+                       MessageBox.Show("Error ending plugin '" + p.AssemblyPath + "'!");
+                }
+            };
         }
 
         void Program_StartupNextInstance(object sender, StartupNextInstanceEventArgs e)

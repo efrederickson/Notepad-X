@@ -53,6 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMacroForm.cs" />
+    <Compile Include="AddMacroForm.Designer.cs">
+      <DependentUpon>AddMacroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Macro.cs" />
     <Compile Include="ThePluginClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewMacrosForm.cs" />
@@ -69,6 +74,14 @@
       <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
       <Name>WinFormsUI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddMacroForm.resx">
+      <DependentUpon>AddMacroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMacrosForm.resx">
+      <DependentUpon>ViewMacrosForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

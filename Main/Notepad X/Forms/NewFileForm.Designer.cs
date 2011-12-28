@@ -58,6 +58,7 @@ namespace NotepadX.Forms
             // 
             // descriptionLabel
             // 
+            this.descriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.descriptionLabel.Location = new System.Drawing.Point(140, 191);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(400, 44);

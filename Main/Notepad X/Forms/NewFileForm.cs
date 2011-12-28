@@ -88,7 +88,7 @@ namespace NotepadX.Forms
         {
             if (categoryListView.SelectedItems.Count == 0)
                 return;
-            
+            fileExtensionListView.Items.Clear();
             foreach (ITextEditor t in IExtendFramework.Text.FileExtensionManager.Editors)
             {
                 if (t.Extension.Category == categoryListView.SelectedItems[0].Text)

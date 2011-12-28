@@ -10,9 +10,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Notepad X")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A Text Editor")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("mlnlover11 Productions")]
 [assembly: AssemblyProduct("Notepad X")]
 [assembly: AssemblyCopyright("Copyright 2010-2011 (C) mlnlover11 Productions")]
 [assembly: AssemblyTrademark("")]

@@ -193,6 +193,38 @@ namespace NotepadX.Plugins
                                     Console.WriteLine("Error: " + ex.ToString());
                                     MessageBox.Show(string.Format("Error Loading Plugin \"{0}\": {1}", FileName, ex));
                                 }
+                            }
+                            //Gets a type object of the interface we need the plugins to match
+                            typeInterface = pluginType.GetInterface(StaticPluginInfo.IPluginInterface, true);
+                            
+                            //Make sure the interface we want to use actually exists
+                            if ((typeInterface != null)) {
+                                //Create a new available plugin since the type implements the IPlugin interface
+                                AvailablePlugin newPlugin = new AvailablePlugin();
+                                
+                                //Set the filename where we found it
+                                newPlugin.AssemblyPath = FileName;
+                                
+                                //Create a new instance and store the instance in the collection for later use
+                                //We could change this later on to not load an instance.. we have 2 options
+                                //1- Make one instance, and use it whenever we need it.. it's always there
+                                //2- Don't make an instance, and instead make an instance whenever we use it, then close it
+                                //For now we'll just make an instance of all the plugins
+                                try {
+                                    newPlugin.Instance = (IPlugin)Activator.CreateInstance(pluginAssembly.GetType(pluginType.ToString()));
+                                    Console.WriteLine(string.Format("PluginManager: Type Match: '{0}' (from {2}) Implements '{1}'. Creating Plugin...", pluginType.Name, StaticPluginInfo.IMenuPluginInterface, FileName));
+                                    pluginsfound += 1;
+                                    //Add the new plugin to our collection here
+                                    this.AvailablePlugins.Add(newPlugin);
+                                    //Call the initialization sub of the plugin
+                                    newPlugin.Instance.Initialize();
+                                    //cleanup a bit
+                                    newPlugin = null;
+                                } catch (Exception ex) {
+                                    newPlugin = null;
+                                    Console.WriteLine("Error: " + ex.ToString());
+                                    MessageBox.Show(string.Format("Error Loading Plugin \"{0}\": {1}", FileName, ex));
+                                }
                             } else {
                             }
                             typeInterface = null;
@@ -250,13 +282,13 @@ namespace NotepadX.Plugins
                     MainForm.Instance.optionsToolStripMenuItem.GetCurrentParent().Items.Insert(index, item);
                 return;
             } else if (path.ToLower().StartsWith("help")) {
-                if (index < MainForm.Instance.helpToolStripMenuItem.GetCurrentParent().Items.Count)
+                if (index > MainForm.Instance.helpToolStripMenuItem.GetCurrentParent().Items.Count)
                     MainForm.Instance.helpToolStripMenuItem.GetCurrentParent().Items.Add(item);
                 else
                     MainForm.Instance.helpToolStripMenuItem.GetCurrentParent().Items.Insert(index, item);
                 return;
             } else if (path.ToLower().StartsWith("macros")) {
-                if (index < MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Count)
+                if (index > MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Count)
                     MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Add(item);
                 else
                     MainForm.Instance.macrosToolStripMenuItem.DropDownItems[0].GetCurrentParent().Items.Insert(index, item);

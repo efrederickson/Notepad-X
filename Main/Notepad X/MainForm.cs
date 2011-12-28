@@ -61,24 +61,25 @@ namespace NotepadX
         
         public void ProcessParameters(object sender, string[] args)
         {
-            if (args.Length != 0)
+            
+            if (args.Length > 1)
             {
                 ITextEditor e = null;
                 try {
-                    e = IExtendFramework.Text.FileExtensionManager.OpenDocument(args[0]);
+                    e = IExtendFramework.Text.FileExtensionManager.OpenDocument(args[1]);
                 } catch (IExtendFramework.IExtendFrameworkException) {
-                    if (MessageBox.Show("No editor registered for file extension '" + System.IO.Path.GetExtension(args[0]) + "'. Open as a text file?", "Notepad X", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+                    if (MessageBox.Show("No editor registered for file extension '" + System.IO.Path.GetExtension(args[1]) + "'. Open as a text file?", "Notepad X", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
                     {
                         e = IExtendFramework.Text.FileExtensionManager.OpenDocument(Application.StartupPath + "\\file.txt");
-                        e.Open(args[0]);
+                        e.Open(args[1]);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Cannot open file '" + args[0] + "!\n" + ex.ToString());
+                    MessageBox.Show("Cannot open file '" + args[1] + "'!\n" + ex.ToString());
                 }
                 if (e != null)
-                    AddForm(e.DockingPanel, DockState.Document);
+                    AddForm(e as DockContent, DockState.Document);
             }
             this.BringToFront();
         }
@@ -93,7 +94,7 @@ namespace NotepadX
                     sw.Close();
                 }
                 nff.Result.Open(nff.Filename);
-                AddForm(nff.Result.DockingPanel, DockState.Document);
+                AddForm(nff.Result as DockContent, DockState.Document);
             }
         }
         
@@ -125,7 +126,7 @@ namespace NotepadX
                     MessageBox.Show("Cannot open file '" + ofd.FileName + "!\n" + ex.ToString());
                 }
                 if (e != null)
-                    AddForm(e2.DockingPanel, DockState.Document);
+                    AddForm(e2 as WeifenLuo.WinFormsUI.Docking.DockContent, DockState.Document);
             }
         }
         
@@ -335,12 +336,23 @@ namespace NotepadX
             } catch (Exception ex) {
                 MessageBox.Show("Error: " + ex.ToString());
             }
-            
         }
         
         public void AddMenuItem(ToolStripMenuItem item, string path, int index)
         {
             PluginManager.GetMenuItemFromString(path, index, item);
+        }
+        
+        public object RunMacro(string macro)
+        {
+            Macros.Parser p = new NotepadX.Macros.Parser(macro);
+            Macros.Environment env = NotepadX.Macros.Environment.LastEnvironment==null ? new Macros.Environment() : Macros.Environment.LastEnvironment;
+            return env.Run(p.Parsed.ToArray());
+        }
+        
+        void MainForm_Load(object sender, EventArgs e)
+        {
+            ProcessParameters(null, Environment.GetCommandLineArgs());
         }
     }
 }

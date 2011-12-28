@@ -75,7 +75,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = int.Parse(a.ToString()) > int.Parse(b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("<"))
@@ -89,7 +89,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = int.Parse(a.ToString()) < int.Parse(b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
                 if (o.ToString().Contains(">="))
@@ -103,7 +103,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = int.Parse(a.ToString()) >= int.Parse(b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("<="))
@@ -117,7 +117,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = int.Parse(a.ToString()) <= int.Parse(b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("=>"))
@@ -131,7 +131,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = int.Parse(a.ToString()) >= int.Parse(b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
                 if (o.ToString().Contains("=<"))
@@ -145,7 +145,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = int.Parse(a.ToString()) <= int.Parse(b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
                 
@@ -160,7 +160,7 @@ namespace NotepadX.Macros
                         if (GetObject(b as string) != null)
                             b = GetObject(b as string);
                         ret = (a.ToString() == b.ToString());
-                    } catch (Exception ex) { ret = false;
+                    } catch (Exception) { ret = false;
                     }
                 }
             }

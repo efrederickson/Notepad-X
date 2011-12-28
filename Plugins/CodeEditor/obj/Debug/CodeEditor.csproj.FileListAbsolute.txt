@@ -1,0 +1,14 @@
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.EditForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.LanguageForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.Style.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NOTEPAD.ICO
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\file.txt
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\license.txt
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\CodeEditor.dll.config
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\CodeEditor.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\CodeEditor.pdb
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.dll
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.pdb

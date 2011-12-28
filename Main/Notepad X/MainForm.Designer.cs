@@ -358,7 +358,7 @@ namespace NotepadX
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // macrosToolStripMenuItem
@@ -366,7 +366,7 @@ namespace NotepadX
             this.macrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
                                     this.runDocumentToolStripMenuItem});
             this.macrosToolStripMenuItem.Name = "macrosToolStripMenuItem";
-            this.macrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.macrosToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.macrosToolStripMenuItem.Text = "Macros";
             // 
             // runDocumentToolStripMenuItem
@@ -531,6 +531,7 @@ namespace NotepadX
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainForm";
             this.Text = "{docname} - Notepad X v{version}";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.dockPanelMenuStrip.ResumeLayout(false);

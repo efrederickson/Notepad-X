@@ -6,3 +6,7 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NotepadX.Macros.Expansions.Plu
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NotepadX.Macros.Expansions.Plugin.pdb
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\NotepadX.Macros.Expansions.Plugin.dll
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\NotepadX.Macros.Expansions.Plugin.pdb
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\NotepadX.Macros.Expansions.Plugin.AddMacroForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\NotepadX.Macros.Expansions.Plugin.ViewMacrosForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\NotepadX.Macros.Expansions.Plugin\obj\x86\Debug\GenerateResource.write.1.tlog
