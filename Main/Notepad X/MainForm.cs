@@ -284,6 +284,7 @@ namespace NotepadX
             try {
                 ITextEditor i = dockPanel1.ActiveDocument as ITextEditor;
                 this.Text = Path.GetFileName(i.Filename) + " - Notepad X v" + Application.ProductVersion;
+                this.undobufferStatusLabel.Text = "Undo Buffer: " + i.UndoBuffer;
             } catch (Exception) {
                 this.Text = "Notepad X v" + Application.ProductVersion;
             }

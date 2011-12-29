@@ -98,7 +98,9 @@ namespace NotepadX
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.undobufferStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.MenuStrip.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.dockPanelMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -420,6 +422,8 @@ namespace NotepadX
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.undobufferStatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 316);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(465, 22);
@@ -518,6 +522,12 @@ namespace NotepadX
             this.saveToolStripMenuItem1.Text = "Save";
             this.saveToolStripMenuItem1.Click += new System.EventHandler(this.SaveToolStripMenuItem1_Click);
             // 
+            // undobufferStatusLabel
+            // 
+            this.undobufferStatusLabel.Name = "undobufferStatusLabel";
+            this.undobufferStatusLabel.Size = new System.Drawing.Size(74, 17);
+            this.undobufferStatusLabel.Text = "Undo Buffer:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,10 +544,13 @@ namespace NotepadX
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.dockPanelMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+        private System.Windows.Forms.ToolStripStatusLabel undobufferStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem runDocumentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;

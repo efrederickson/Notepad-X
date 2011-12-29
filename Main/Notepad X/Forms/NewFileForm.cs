@@ -74,7 +74,8 @@ namespace NotepadX.Forms
             {
                 if (t.Extension.Extension == (fileExtensionListView.SelectedItems[0].Tag as IFileExtension).Extension)
                 {
-                    this.Result =(ITextEditor) System.Activator.CreateInstance(t.GetType());
+                    //this.Result =(ITextEditor) System.Activator.CreateInstance(t.GetType());
+                    this.Result = t.Create("");
                     break;
                 }
             }

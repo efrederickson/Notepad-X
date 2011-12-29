@@ -69,9 +69,10 @@ namespace NotepadX.DefaultExtensions
         public ITextEditor Create(string FileName)
         {
             TXTEditor e = new TXTEditor();
-            e.Open(FileName);
-            return e;
-        }
+            if (File.Exists(FileName))
+                e.Open(FileName);
+                return e;
+            }
         
         public void Undo()
         {
@@ -167,7 +168,7 @@ namespace NotepadX.DefaultExtensions
         
         public string DocumentText
         {
-            get 
+            get
             {
                 try {
                     return textBox1.Text;
@@ -175,7 +176,7 @@ namespace NotepadX.DefaultExtensions
                     return "";
                 }
             }
-            set 
+            set
             {
                 textBox1.Text = value;
             }

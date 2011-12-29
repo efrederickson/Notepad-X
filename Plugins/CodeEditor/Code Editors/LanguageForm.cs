@@ -17,7 +17,7 @@ namespace CodeEditor
     /// </summary>
     public class LanguageForm : Form
     {
-
+        
         private Button withEventsField_btnCancel;
         public Button btnCancel {
             get { return withEventsField_btnCancel; }
@@ -99,7 +99,7 @@ namespace CodeEditor
             trvFileTypes.SelectedNode = trvFileTypes.Nodes[0];
         }
 
-            protected override void Dispose(bool disposing)
+        protected override void Dispose(bool disposing)
         {
             if ((disposing)) {
                 if ((components != null)) {
@@ -148,25 +148,11 @@ namespace CodeEditor
             var doc = new Document("", "", "");
             doc.Title = ("Untitled" + ft.Extension);
             doc.Path = Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\\";
-            string DocName = string.Empty;
-            while (string.IsNullOrEmpty(DocName)) {
-                DocName = Interaction.InputBox("Document Name (cannot be empty)");
-                bool found = false;
-                foreach (char illegalChar in System.IO.Path.GetInvalidPathChars()) {
-                    if (DocName.Contains(illegalChar))
-                        found = true;
-                }
-                if (DocName.Contains("\\") | DocName.Contains("/") | DocName.Contains(":"))
-                    found = true;
-                if (found) {
-                    Interaction.MsgBox("Document Name contains illegal character!");
-                    DocName = "";
-                }
-            }
+            string DocName = "Document";
             doc.DocumentText = "";
             doc.Path = doc.Path + DocName + ft.Extension;
             doc.Title = doc.Path;
-            EditForm ef = new EditForm(doc.Title, doc.Path, doc.DocumentText, syntax);
+            EditForm ef = new EditForm(doc.Title, doc.Path, doc.DocumentText, syntax, ft);
             EditForm = ef;
             DialogResult = DialogResult.OK;
             this.Close();

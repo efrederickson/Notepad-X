@@ -1,3 +1,5 @@
+using Alsing.SourceCode;
+using IExtendFramework.Text;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections;
@@ -11,6 +13,7 @@ using System.Drawing;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using System.Reflection;
+
 namespace CodeEditor
 {
 
@@ -37,11 +40,17 @@ namespace CodeEditor
 
         public bool Initialize()
         {
+            int c = 0;
+            Code_Editors.LoadingForm loadingForm = new CodeEditor.Code_Editors.LoadingForm();
+            loadingForm.Set(0, c);
+            loadingForm.Show();
+            int i = 0;
             CodeEditor.SyntaxDefinitionList list = new CodeEditor.SyntaxDefinitionList();
             if (!System.IO.File.Exists(Application.LocalUserAppDataPath + "\\hasExtractedCodeSyntax")) {
                 List<Stream> strms = new LanguageList().LanguagesList;
                 Directory.CreateDirectory(Application.LocalUserAppDataPath + "\\SyntaxDefinitions\\");
-                for (int i = 0; i <= strms.Count - 1; i++) {
+                for (i = 0; i <= strms.Count - 1; i++) {
+                    c = strms.Count * 2 + 1;
                     Stream langStream = strms[i];
                     string path = string.Format("{0}\\SyntaxDefinitions\\{1}.syn", Application.LocalUserAppDataPath, System.IO.Path.GetFileName(System.IO.Path.GetTempFileName()));
                     FileStream file = new FileStream(path, FileMode.Create);
@@ -55,13 +64,14 @@ namespace CodeEditor
                     if (langStream != null) {
                         list.GetLanguageFromFile(path);
                     }
+                    loadingForm.Set(i, c);
                 }
                 System.IO.File.Create(Application.LocalUserAppDataPath + "\\hasExtractedCodeSyntax");
             } else {
                 string[] files234 = System.IO.Directory.GetFiles(Application.LocalUserAppDataPath + "\\SyntaxDefinitions\\");
                 if (files234.Count() > 0) {
-                    for (int i = 0; i <= files234.Count() - 1; i++) {
-                        list.GetLanguageFromFile(files234[i]);
+                    for (int i2 = 0; i2 <= files234.Count() - 1; i2++) {
+                        list.GetLanguageFromFile(files234[i2]);
                     }
                 } else {
                     System.IO.File.Delete(Application.LocalUserAppDataPath + "\\hasExtractedCodeSyntax");
@@ -70,22 +80,26 @@ namespace CodeEditor
             }
             string[] files = System.IO.Directory.GetFiles(SpecialDirectories.MyDocuments + "\\Notepad X\\SyntaxFiles\\");
             if (files.Count() > 0) {
-                for (int i = 0; i <= files.Count() - 1; i++) {
+                for (int i2 = 0; i2 <= files.Count() - 1; i2++) {
                     try {
-                        list.GetLanguageFromFile(files[i]);
+                        list.GetLanguageFromFile(files[i2]);
                     } catch (Exception ex) {
-                        MessageBox.Show("Cannot load '" + files[i] + "':\n" + ex.ToString());
+                        MessageBox.Show("Cannot load '" + files[i2] + "':\n" + ex.ToString());
                     }
                 }
             }
-            LanguageForm lang = new LanguageForm(list);
-            lang.ShowDialog();
-            //If lang.DialogResult = DialogResult.OK Then
-            //lang.EditForm.MdiParent = Me
-            //lang.EditForm = Module1.IconManager.Check(lang.EditForm)
-            //lang.EditForm = Module1.LanguageManager.Check(lang.EditForm)
-            //lang.EditForm.Show(NotepadX.Main.MDIParent1.DockPanel1)
-            //End If
+            
+            foreach (SyntaxDefinition syntax in list.GetSyntaxDefinitions()) {
+                foreach (FileType e in syntax.FileTypes)
+                {
+                    EditForm f = new EditForm("", "", "", syntax, e);
+                    IExtendFramework.Text.FileExtensionManager.AddEditor(f as ITextEditor);
+                    while (i > c)
+                        c++;
+                           loadingForm.Set(i++, c);
+                }
+            }
+            loadingForm.Close();
             return true;
         }
 

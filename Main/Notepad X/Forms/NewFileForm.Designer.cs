@@ -48,6 +48,9 @@ namespace NotepadX.Forms
             // 
             // fileExtensionListView
             // 
+            this.fileExtensionListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+                                    | System.Windows.Forms.AnchorStyles.Left) 
+                                    | System.Windows.Forms.AnchorStyles.Right)));
             this.fileExtensionListView.Location = new System.Drawing.Point(140, 13);
             this.fileExtensionListView.Name = "fileExtensionListView";
             this.fileExtensionListView.Size = new System.Drawing.Size(400, 171);
@@ -58,6 +61,7 @@ namespace NotepadX.Forms
             // 
             // descriptionLabel
             // 
+            this.descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.descriptionLabel.Location = new System.Drawing.Point(140, 191);
             this.descriptionLabel.Name = "descriptionLabel";
@@ -67,6 +71,7 @@ namespace NotepadX.Forms
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(146, 245);
             this.label2.Name = "label2";
@@ -76,6 +81,7 @@ namespace NotepadX.Forms
             // 
             // fileNameTextBox
             // 
+            this.fileNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.fileNameTextBox.Location = new System.Drawing.Point(203, 238);
             this.fileNameTextBox.Name = "fileNameTextBox";
             this.fileNameTextBox.Size = new System.Drawing.Size(302, 20);
@@ -84,6 +90,7 @@ namespace NotepadX.Forms
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(511, 236);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(29, 23);
@@ -94,6 +101,7 @@ namespace NotepadX.Forms
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(384, 293);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -104,6 +112,7 @@ namespace NotepadX.Forms
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(465, 293);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +123,9 @@ namespace NotepadX.Forms
             // 
             // categoryListView
             // 
+            this.categoryListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+                                    | System.Windows.Forms.AnchorStyles.Left) 
+                                    | System.Windows.Forms.AnchorStyles.Right)));
             this.categoryListView.FullRowSelect = true;
             this.categoryListView.Location = new System.Drawing.Point(13, 13);
             this.categoryListView.MultiSelect = false;

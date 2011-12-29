@@ -1,7 +1,0 @@
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\CodeEditor.EditForm.resources
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\CodeEditor.LanguageForm.resources
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\CodeEditor.Style.resources
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\CodeEditor.My_Project.Resources.resources
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\GenerateResource.read.1.tlog
-C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor.ConvertedToC#\obj\Debug\GenerateResource.write.1.tlog

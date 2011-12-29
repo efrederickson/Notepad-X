@@ -21,8 +21,9 @@ namespace CodeEditor
     public class EditForm : WeifenLuo.WinFormsUI.Docking.DockContent, IExtendFramework.Text.ITextEditor
     {
         public SyntaxDefinition Syntax;
-    
-        #region F0RMZ D3Z1GN3R  
+        public FileType Ext;
+        
+        #region F0RMZ D3Z1GN3R
         IContainer components;
         public Document Doc;
         public SyntaxBoxControl sBox;
@@ -349,7 +350,7 @@ namespace CodeEditor
         #endregion
         
         //create an EditForm and attach our opened document and tell the parser to use the given syntax.
-        public EditForm(string title, string path, string documentText, SyntaxDefinition SyntaxDefinition)
+        public EditForm(string title, string path, string documentText, SyntaxDefinition SyntaxDefinition, FileType ext)
         {
             Load += EditForm_Load;
             Closing += EditForm_Closing;
@@ -360,7 +361,10 @@ namespace CodeEditor
             sBox.Document.Parser.Init(SyntaxDefinition);
             this.Syntax = SyntaxDefinition;
             sBox.Document.Text = Doc.DocumentText;
-            this.Text = "Notepad X - " + Doc.Title;
+            this.Text = Doc.Title;
+            this.TabText = Doc.Title;
+            this.Ext = ext;
+            this.statusBar1.Visible = false;
         }
 
         /// <summary>
@@ -387,6 +391,7 @@ namespace CodeEditor
                     s = " *";
                 }
                 this.Text = Doc.Title + s;
+                this.TabText = Doc.Title + s;
                 statusBarPanel1.Text = "Undo buffer :" + Constants.vbTab + sDoc.UndoStep;
                 //show number of steps in the undostack in one of the panels in the statusbar
             } catch (Exception) {
@@ -413,7 +418,7 @@ namespace CodeEditor
             }
             sDoc.Modified = false;
             Doc.Title = System.IO.Path.GetFileName(Doc.Path);
-            this.Text = "Notepad X - " + Doc.Title;
+            this.Text = Doc.Title;
         }
 
         //occurs when a form is about to be closed
@@ -860,6 +865,9 @@ namespace CodeEditor
         private void NewToolStripMenuItem_Click(System.Object sender, System.EventArgs e)
         {
             sBox.Text = "";
+            Doc.DocumentText = "";
+            Doc.Title = "";
+            Doc.Path= "";
         }
 
         private void UndoToolStripMenuItem_Click(System.Object sender, System.EventArgs e)
@@ -905,6 +913,7 @@ namespace CodeEditor
             if (o.ShowDialog() == DialogResult.OK) {
                 sBox.Text = System.IO.File.ReadAllText(o.FileName);
             }
+            Doc.Path = o.FileName;
         }
 
         private void SaveToolStripMenuItem_Click(System.Object sender, System.EventArgs e)
@@ -1004,16 +1013,18 @@ namespace CodeEditor
 
         public IExtendFramework.Text.IFileExtension Extension {
             get {
-                return Syntax.FileTypes;
+                // TODO: description, category
+                return new FileExtension(Ext.Extension, "A(n) " + Ext.Name, "Programming");
             }
         }
 
         public string Filename {
             get {
-                throw new NotImplementedException();
+                return Doc.Path;
             }
             set {
-                throw new NotImplementedException();
+                this.Doc.Path = value;
+                sBox.Text = System.IO.File.ReadAllText(value);
             }
         }
 
@@ -1025,13 +1036,13 @@ namespace CodeEditor
 
         public int UndoBuffer {
             get {
-                return syntaxDocument1.UndoStep;
+                return sDoc.UndoStep;
             }
         }
 
-        public IExtendFramework.Text.ITextEditor Create(string FileName)
+        public IExtendFramework.Text.ITextEditor Create(string filename)
         {
-            return new EditForm(FileName, FileName, File.ReadAllText(FileName), null);
+            return new EditForm(filename, filename,File.Exists(filename) ? File.ReadAllText(filename) : "", Syntax, Ext);
         }
 
         public void Undo()
@@ -1076,35 +1087,37 @@ namespace CodeEditor
 
         public void Insert(int index, string text)
         {
-            throw new NotImplementedException();
+            TextPoint pos = sBox.Caret.Position;
+            sDoc.InsertText(text, index, index);
         }
 
         public void ChangeFont(System.Drawing.Font newFont)
         {
-            throw new NotImplementedException();
+            sBox.Font = newFont;
         }
 
         public void ChangeColor(System.Drawing.Color newColor)
         {
-            throw new NotImplementedException();
+            sBox.ForeColor = newColor;
         }
 
         public void Open(string filename)
         {
-            throw new NotImplementedException();
+            Doc.Path = filename;
+            sBox.Text = File.ReadAllText(filename);
         }
 
         public void SelectAll()
         {
-            throw new NotImplementedException();
+            sBox.SelectAll();
         }
         
         public string DocumentText {
             get {
-                throw new NotImplementedException();
+                return sBox.Text;
             }
             set {
-                throw new NotImplementedException();
+                sBox.Text = value;
             }
         }
         
@@ -1115,7 +1128,7 @@ namespace CodeEditor
         
         public void Save()
         {
-            throw new NotImplementedException();
+            SaveToolStripMenuItem_Click(null, EventArgs.Empty);
         }
     }
 }
