@@ -13,3 +13,4 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\GenerateRes
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\Notepad X.exe
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\Notepad X.pdb
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Plugins.PluginsForm.resources

@@ -19,8 +19,6 @@ namespace CodeEditor
 
     public class Main : NotepadX.Plugins.IPlugin
     {
-        ToolStripMenuItem _ti;
-
         public string Author {
             get { return "Elijah Frederickson"; }
         }

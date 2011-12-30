@@ -355,5 +355,16 @@ namespace NotepadX
         {
             ProcessParameters(null, Environment.GetCommandLineArgs());
         }
+        
+        void TextFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DefaultExtensions.TXTEditor e2 = new NotepadX.DefaultExtensions.TXTEditor().Create("") as DefaultExtensions.TXTEditor;
+            AddForm(e2, DockState.Document);
+        }
+        
+        void PluginsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Plugins.PluginsForm().ShowDialog();
+        }
     }
 }

@@ -118,13 +118,19 @@ namespace NotepadX.Macros.Expansions.Plugin
         
         public bool Dispose()
         {
-            INIDocument d = new INIDocument();
+            try {
+                INIDocument d = new INIDocument();
             foreach (Macro m in Macros)
             {
                 d.SetValue(m.Filename, "Name", m.Name);
                 d.SetValue(m.Filename, "Description", m.Description);
             }
             d.Save(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Macros\\Macros.ini");
+            
+            } catch (Exception ex) {
+                MessageBox.Show("Error saving Macro listl: \n" + ex.ToString());
+                return false;
+            }
             
             return true;
         }

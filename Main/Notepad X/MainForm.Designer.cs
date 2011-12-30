@@ -56,6 +56,7 @@ namespace NotepadX
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,13 +93,14 @@ namespace NotepadX
             this.macroGuideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pluginGuideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.undobufferStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.dockPanelMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.undobufferStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pluginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.dockPanelMenuStrip.SuspendLayout();
@@ -139,6 +141,8 @@ namespace NotepadX
             // 
             // newToolStripMenuItem
             // 
+            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.textFileToolStripMenuItem});
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
@@ -146,6 +150,13 @@ namespace NotepadX
             this.newToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItem_Click);
+            // 
+            // textFileToolStripMenuItem
+            // 
+            this.textFileToolStripMenuItem.Name = "textFileToolStripMenuItem";
+            this.textFileToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.textFileToolStripMenuItem.Text = "Text File";
+            this.textFileToolStripMenuItem.Click += new System.EventHandler(this.TextFileToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
@@ -352,7 +363,8 @@ namespace NotepadX
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
                                     this.optionsToolStripMenuItem,
-                                    this.macrosToolStripMenuItem});
+                                    this.macrosToolStripMenuItem,
+                                    this.pluginsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
@@ -360,7 +372,7 @@ namespace NotepadX
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // macrosToolStripMenuItem
@@ -368,7 +380,7 @@ namespace NotepadX
             this.macrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
                                     this.runDocumentToolStripMenuItem});
             this.macrosToolStripMenuItem.Name = "macrosToolStripMenuItem";
-            this.macrosToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.macrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.macrosToolStripMenuItem.Text = "Macros";
             // 
             // runDocumentToolStripMenuItem
@@ -429,6 +441,12 @@ namespace NotepadX
             this.statusStrip1.Size = new System.Drawing.Size(465, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // undobufferStatusLabel
+            // 
+            this.undobufferStatusLabel.Name = "undobufferStatusLabel";
+            this.undobufferStatusLabel.Size = new System.Drawing.Size(74, 17);
+            this.undobufferStatusLabel.Text = "Undo Buffer:";
             // 
             // timer1
             // 
@@ -522,11 +540,12 @@ namespace NotepadX
             this.saveToolStripMenuItem1.Text = "Save";
             this.saveToolStripMenuItem1.Click += new System.EventHandler(this.SaveToolStripMenuItem1_Click);
             // 
-            // undobufferStatusLabel
+            // pluginsToolStripMenuItem
             // 
-            this.undobufferStatusLabel.Name = "undobufferStatusLabel";
-            this.undobufferStatusLabel.Size = new System.Drawing.Size(74, 17);
-            this.undobufferStatusLabel.Text = "Undo Buffer:";
+            this.pluginsToolStripMenuItem.Name = "pluginsToolStripMenuItem";
+            this.pluginsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pluginsToolStripMenuItem.Text = "Plugins";
+            this.pluginsToolStripMenuItem.Click += new System.EventHandler(this.PluginsToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -550,6 +569,8 @@ namespace NotepadX
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+        private System.Windows.Forms.ToolStripMenuItem pluginsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem textFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel undobufferStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem runDocumentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;

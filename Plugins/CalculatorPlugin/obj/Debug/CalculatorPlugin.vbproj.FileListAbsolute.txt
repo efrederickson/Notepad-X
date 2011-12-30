@@ -9,4 +9,3 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\Gener
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.dll
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CalculatorPlugin\obj\Debug\CalculatorPlugin.pdb
-C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\license.txt

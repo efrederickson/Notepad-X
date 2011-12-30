@@ -95,6 +95,10 @@
     <Compile Include="Plugins\IMenuPlugin.cs" />
     <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="Plugins\PluginsForm.cs" />
+    <Compile Include="Plugins\PluginsForm.Designer.cs">
+      <DependentUpon>PluginsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Plugins\StaticPluginInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\PluginsForm.resx">
+      <DependentUpon>PluginsForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

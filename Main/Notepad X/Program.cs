@@ -7,6 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using IExtendFramework.Plugins;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -18,6 +20,7 @@ namespace NotepadX
     /// </summary>
     internal sealed class Program : WindowsFormsApplicationBase
     {
+        public static List<string> FilesToDelete = new List<string>();
         /// <summary>
         /// Program entry point.
         /// </summary>
@@ -26,6 +29,10 @@ namespace NotepadX
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // check folders
+            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Plugins"))
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Plugins");
+            
             MainForm mf = new MainForm();
             Application.Run(mf);
         }
@@ -36,12 +43,24 @@ namespace NotepadX
             this.EnableVisualStyles = true;
             this.ShutdownStyle = ShutdownMode.AfterMainFormCloses;
             this.StartupNextInstance += new StartupNextInstanceEventHandler(Program_StartupNextInstance);
-            this.Shutdown += delegate { 
+            this.Shutdown += delegate {
                 foreach (NotepadX.Plugins.AvailablePlugin p in NotepadX.MainForm.PluginManager.AvailablePlugins)
                 {
-                   bool a = p.Instance.Dispose();
-                   if (!a)
-                       MessageBox.Show("Error ending plugin '" + p.AssemblyPath + "'!");
+                    bool a;
+                    if (p.Instance != null)
+                        a = p.Instance.Dispose();
+                    else
+                        a = p.MenuItem.Dispose();
+                    if (!a)
+                        MessageBox.Show("Error disposing plugin '" + p.AssemblyPath + "'!");
+                }
+                foreach (string filename in FilesToDelete)
+                {
+                    try {
+                        File.Delete(filename);
+                    } catch (Exception) {
+                        
+                    }
                 }
             };
         }
