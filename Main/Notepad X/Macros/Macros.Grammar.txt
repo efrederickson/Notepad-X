@@ -1,0 +1,25 @@
+﻿for <var=incrementer>, <int=max>, <int=incrementation> do
+<statements>
+end
+
+if <expression> then
+<statements>
+else
+<statements>
+end
+
+while <expression> do
+<statements>
+end
+
+set <var name> = <value>
+var <var name> [= <value>]
+
+function <name>(<arglist>)
+<statements>
+end
+
+call <function> [arg, list]
+
+[Comment]
+--

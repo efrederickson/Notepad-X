@@ -41,30 +41,33 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IExtendFramework">
-      <HintPath>C:\Users\elijah.FFHS2\Documents\SharpDevelop Projects\IExtendFramework\bin\Debug\IExtendFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics">
       <HintPath>..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -73,14 +76,31 @@
       <DependentUpon>NXMEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="DefaultExtensions\NXMExtension.cs" />
+    <Compile Include="DefaultExtensions\RTFEditor.cs" />
+    <Compile Include="DefaultExtensions\RTFEditor.Designer.cs">
+      <DependentUpon>RTFEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultExtensions\RTFExtension.cs" />
     <Compile Include="DefaultExtensions\TXTEditor.cs" />
     <Compile Include="DefaultExtensions\TXTEditor.Designer.cs">
       <DependentUpon>TXTEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="DefaultExtensions\TXTExtension.cs" />
+    <Compile Include="Forms\AboutForm.cs" />
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HelpForm.cs" />
+    <Compile Include="Forms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NewFileForm.cs" />
     <Compile Include="Forms\NewFileForm.Designer.cs">
       <DependentUpon>NewFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.cs" />
+    <Compile Include="Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Macros\AST.cs" />
     <Compile Include="Macros\Environment.cs" />
@@ -105,9 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="file.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Macros\Macros.Grammar.txt" />
     <None Include="NOTEPAD.ICO">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -116,11 +134,23 @@
     <EmbeddedResource Include="DefaultExtensions\NXMEditor.resx">
       <DependentUpon>NXMEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DefaultExtensions\RTFEditor.resx">
+      <DependentUpon>RTFEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DefaultExtensions\TXTEditor.resx">
       <DependentUpon>TXTEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewFileForm.resx">
       <DependentUpon>NewFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -130,6 +160,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Documents\SharpDevelop Projects\IExtendFramework\IExtendFramework\IExtendFramework.csproj">
+      <Project>{555B1E7D-E629-48A7-87A4-0AFBB69290FC}</Project>
+      <Name>IExtendFramework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Required Libraries\WinFormsUI\WinFormsUI.csproj">
       <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
       <Name>WinFormsUI</Name>

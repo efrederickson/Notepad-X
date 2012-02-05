@@ -104,7 +104,9 @@ namespace NotepadX.Macros.Expansions.Plugin
                     string name = doc[sname]["Name"];
                     ToolStripMenuItem i = new ToolStripMenuItem(name);
                     i.Tag = sname; // filename
-                    i.Click += delegate { NotepadX.MainForm.Instance.RunMacro(File.ReadAllText(sname)); };
+                    i.Click += delegate { NotepadX.MainForm.Instance.RunMacro(File.ReadAllText(sname)); MessageBox.Show("ran macro: " + sname); };
+                    if (!string.IsNullOrEmpty(i.Text))
+                        NotepadX.MainForm.Instance.AddMenuItem(i, "macros", 3);
                     Macros.Add(new Macro(sname, doc[sname]["Description"], doc[sname]["Name"]));
                 }
                 // weird glitch, but it must go.
@@ -120,13 +122,13 @@ namespace NotepadX.Macros.Expansions.Plugin
         {
             try {
                 INIDocument d = new INIDocument();
-            foreach (Macro m in Macros)
-            {
-                d.SetValue(m.Filename, "Name", m.Name);
-                d.SetValue(m.Filename, "Description", m.Description);
-            }
-            d.Save(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Macros\\Macros.ini");
-            
+                foreach (Macro m in Macros)
+                {
+                    d.SetValue(m.Filename, "Name", m.Name);
+                    d.SetValue(m.Filename, "Description", m.Description);
+                }
+                d.Save(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Macros\\Macros.ini");
+                
             } catch (Exception ex) {
                 MessageBox.Show("Error saving Macro listl: \n" + ex.ToString());
                 return false;

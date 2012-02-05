@@ -1,6 +1,5 @@
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\NOTEPAD.ICO
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\license.txt
-C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\file.txt
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Notepad X.exe.config
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Notepad X.exe
 C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\Notepad X.pdb
@@ -14,3 +13,7 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\GenerateRes
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\Notepad X.exe
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\Notepad X.pdb
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Plugins.PluginsForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Forms.AboutForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Forms.OptionsForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Forms.HelpForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.DefaultExtensions.RTFEditor.resources

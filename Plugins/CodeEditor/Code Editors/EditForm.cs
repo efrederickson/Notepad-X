@@ -1114,10 +1114,10 @@ namespace CodeEditor
         
         public string DocumentText {
             get {
-                return sBox.Text;
+                return sDoc.Text;
             }
             set {
-                sBox.Text = value;
+                sDoc.Text = value;
             }
         }
         

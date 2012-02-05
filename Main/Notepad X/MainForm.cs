@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using IExtendFramework.Controls.AdvancedMessageBox;
 using IExtendFramework.Text;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -39,10 +40,13 @@ namespace NotepadX
             // set up default extensions - TODO: move to plugin
             IExtendFramework.Text.FileExtensionManager.AddEditor(new DefaultExtensions.TXTEditor());
             IExtendFramework.Text.FileExtensionManager.AddEditor(new DefaultExtensions.NXMEditor());
+            IExtendFramework.Text.FileExtensionManager.AddEditor(new DefaultExtensions.RTFEditor());
         }
         
         public void AddForm(DockContent dc, DockState ds)
         {
+            if (dc == null)
+                return;
             //FIXME: set 'dc.ShowHint = ds' without failing from no active content
             dc.ShowHint = DockState.Document;
             dc.MdiParent = this;
@@ -61,17 +65,17 @@ namespace NotepadX
         
         public void ProcessParameters(object sender, string[] args)
         {
-            
             if (args.Length > 1)
             {
                 ITextEditor e = null;
                 try {
                     e = IExtendFramework.Text.FileExtensionManager.OpenDocument(args[1]);
-                } catch (IExtendFramework.IExtendFrameworkException) {
+                } catch (IExtendFramework.Text.InvalidFileTypeException) {
                     if (MessageBox.Show("No editor registered for file extension '" + System.IO.Path.GetExtension(args[1]) + "'. Open as a text file?", "Notepad X", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
                     {
-                        e = IExtendFramework.Text.FileExtensionManager.OpenDocument(Application.StartupPath + "\\file.txt");
-                        e.Open(args[1]);
+                        DefaultExtensions.TXTEditor ed = new NotepadX.DefaultExtensions.TXTEditor();
+                        ed.Open(args[1]);
+                        AddForm(ed as DockContent, DockState.Document);
                     }
                 }
                 catch (Exception ex)
@@ -114,11 +118,12 @@ namespace NotepadX
                 ITextEditor e2 = null;
                 try {
                     e2 = IExtendFramework.Text.FileExtensionManager.OpenDocument(ofd.FileName);
-                } catch (IExtendFramework.IExtendFrameworkException) {
+                } catch (IExtendFramework.Text.InvalidFileTypeException) {
                     if (MessageBox.Show("No editor registered for file extension '" + System.IO.Path.GetExtension(ofd.FileName) + "'. Open as a text file?", "Notepad X", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
                     {
-                        e2 = IExtendFramework.Text.FileExtensionManager.OpenDocument(Application.StartupPath + "\\file.txt");
-                        e2.Open(ofd.FileName);
+                        DefaultExtensions.TXTEditor ed = new NotepadX.DefaultExtensions.TXTEditor();
+                        ed.Open(ofd.FileName);
+                        AddForm(ed as DockContent, DockState.Document);
                     }
                 }
                 catch (Exception ex)
@@ -282,6 +287,11 @@ namespace NotepadX
         void Timer1_Tick(object sender, EventArgs e)
         {
             try {
+                if (dockPanel1.ActiveContent == null)
+                    sepMenuItem.Visible = false;
+                else
+                    sepMenuItem.Visible = true;
+                
                 ITextEditor i = dockPanel1.ActiveDocument as ITextEditor;
                 this.Text = Path.GetFileName(i.Filename) + " - Notepad X v" + Application.ProductVersion;
                 this.undobufferStatusLabel.Text = "Undo Buffer: " + i.UndoBuffer;
@@ -365,6 +375,51 @@ namespace NotepadX
         void PluginsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Plugins.PluginsForm().ShowDialog();
+        }
+        
+        void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Forms.OptionsForm().ShowDialog();
+        }
+        
+        void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Forms.AboutForm().ShowDialog();
+        }
+        
+        void HelpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new Forms.HelpForm().ShowDialog();
+        }
+        
+        void UserGuideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaskDialogOptions o = new TaskDialogOptions();
+            o.Content = "Sorry, this is unavailable";
+            o.MainInstruction = "Unavailable!";
+            o.Title = "Unavailable";
+            o.ExpandedInfo = "This is coming soon";
+            TaskDialog.Show(o);
+        }
+        
+        void MacroGuideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaskDialogOptions o = new TaskDialogOptions();
+            o.Content = "Sorry, this is unavailable";
+            o.MainInstruction = "Unavailable!";
+            o.Title = "Unavailable";
+            o.ExpandedInfo = "This is coming soon";
+            TaskDialog.Show(o);
+        }
+        
+        void PluginGuideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaskDialogOptions o = new TaskDialogOptions();
+            o.Content = "Sorry, this is unavailable";
+            o.MainInstruction = "Unavailable!";
+            o.Title = "Unavailable";
+            o.ExpandedInfo = "This is coming soon";
+            TaskDialog.Show(o);
         }
     }
 }

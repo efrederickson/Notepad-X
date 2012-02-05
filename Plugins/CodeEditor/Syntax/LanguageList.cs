@@ -83,7 +83,7 @@ namespace CodeEditor
             PHP,
             Povray,
             Python,
-            rtf,
+            //rtf,
             SmallTalk,
             SqlServer2K,
             SqlServer2K5,

@@ -47,6 +47,9 @@ namespace NotepadX.Macros
         {
             string lline = line.ToLower().TrimStart();
             line = line.TrimStart();
+            // check for a comment
+            if (lline.StartsWith("--"))
+                return null;
             // check for if-then/for/while/ etc.
             if (lline.StartsWith("for "))
                 return ParseForLoop(line, sr);
@@ -78,11 +81,14 @@ namespace NotepadX.Macros
                 // passed - its a double
                 return double.Parse(line);
             } catch (Exception) { }
+            try {
+                return line.ToString();
+            } catch (Exception) { }
             
             return line;
         }
         
-        object ParseFunctionCall(string line, StringReader sr)
+        AST.FunctionCall ParseFunctionCall(string line, StringReader sr)
         {
             string fn;
             string[] args;

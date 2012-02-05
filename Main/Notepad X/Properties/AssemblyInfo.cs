@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mlnlover11 Productions")]
 [assembly: AssemblyProduct("Notepad X")]
-[assembly: AssemblyCopyright("Copyright 2010-2011 (C) mlnlover11 Productions")]
+[assembly: AssemblyCopyright("Copyright 2010-2012 (C) mlnlover11 Productions")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
