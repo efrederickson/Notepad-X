@@ -32,9 +32,32 @@ namespace NotepadX
             // check folders
             if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Plugins"))
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Notepad X\\Plugins");
+            FileFilterSettings.Load();
+            new Program();
             
             MainForm mf = new MainForm();
             Application.Run(mf);
+            
+            // CLOSING
+            FileFilterSettings.Save();
+            foreach (NotepadX.Plugins.AvailablePlugin p in NotepadX.MainForm.PluginManager.AvailablePlugins)
+            {
+                bool a;
+                if (p.Instance != null)
+                    a = p.Instance.Dispose();
+                else
+                    a = p.MenuItem.Dispose();
+                if (!a)
+                    MessageBox.Show("Error disposing plugin '" + p.AssemblyPath + "'!");
+            }
+            foreach (string filename in FilesToDelete)
+            {
+                try {
+                    File.Delete(filename);
+                } catch (Exception) {
+                    
+                }
+            }
         }
         
         public Program()
@@ -44,6 +67,7 @@ namespace NotepadX
             this.ShutdownStyle = ShutdownMode.AfterMainFormCloses;
             this.StartupNextInstance += new StartupNextInstanceEventHandler(Program_StartupNextInstance);
             this.Shutdown += delegate {
+                FileFilterSettings.Save();
                 foreach (NotepadX.Plugins.AvailablePlugin p in NotepadX.MainForm.PluginManager.AvailablePlugins)
                 {
                     bool a;

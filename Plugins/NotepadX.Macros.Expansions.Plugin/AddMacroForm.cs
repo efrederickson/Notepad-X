@@ -26,10 +26,6 @@ namespace NotepadX.Macros.Expansions.Plugin
             // The InitializeComponent() call is required for Windows Forms designer support.
             //
             InitializeComponent();
-            
-            //
-            // TODO: Add constructor code after the InitializeComponent() call.
-            //
         }
         
         void Button1_Click(object sender, EventArgs e)

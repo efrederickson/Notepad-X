@@ -14,3 +14,5 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\bin\Debug\CodeEditor.pdb
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.dll
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.pdb
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\CodeEditor.Code_Editors.LoadingForm.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\GenerateResource.read.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Plugins\CodeEditor\obj\Debug\GenerateResource.write.0.tlog

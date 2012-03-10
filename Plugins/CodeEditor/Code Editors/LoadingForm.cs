@@ -23,10 +23,6 @@ namespace CodeEditor.Code_Editors
             // The InitializeComponent() call is required for Windows Forms designer support.
             //
             InitializeComponent();
-            
-            //
-            // TODO: Add constructor code after the InitializeComponent() call.
-            //
         }
         
         public void Set(int c, int max)

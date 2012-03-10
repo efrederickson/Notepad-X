@@ -105,14 +105,7 @@ namespace NotepadX
         void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            string f = "";
-            foreach (ITextEditor i in IExtendFramework.Text.FileExtensionManager.Editors)
-            {
-                f += i.Extension.Extension + " file|*" + i.Extension.Extension + "|";
-            }
-            if (f.EndsWith("|"))
-                f = f.Substring(0, f.Length - 1);
-            ofd.Filter = f;
+            ofd.Filter = FileFilterSettings.ToFilter();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 ITextEditor e2 = null;
@@ -130,8 +123,11 @@ namespace NotepadX
                 {
                     MessageBox.Show("Cannot open file '" + ofd.FileName + "!\n" + ex.ToString());
                 }
-                if (e != null)
+                if (e2 != null)
+                {
+                    FileFilterSettings.AddAHit(e2.Extension);
                     AddForm(e2 as WeifenLuo.WinFormsUI.Docking.DockContent, DockState.Document);
+                }
             }
         }
         

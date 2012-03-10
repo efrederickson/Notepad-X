@@ -14,6 +14,7 @@ namespace CodeEditor
     /// <summary>
     /// Holder of an Extension
     /// </summary>
+    [Serializable]
     public class FileExtension : IFileExtension
     {
         string Ext, Desc, Cat;

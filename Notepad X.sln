@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-# SharpDevelop 4.2.0.8485-alpha
+# SharpDevelop 4.2.0.8659-Beta 2
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other Utilities", "Other Utilities", "{B951BA46-2462-42A5-A1AF-D0A7C4AA2B53}"
 	ProjectSection(SolutionItems) = postProject
 	EndProjectSection
@@ -27,6 +27,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notepad X", "Main\Notepad X\Notepad X.csproj", "{B3373EFE-70E2-4D86-A97C-28BF629DE7DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IExtendFramework", "..\..\Documents\SharpDevelop Projects\IExtendFramework\IExtendFramework\IExtendFramework.csproj", "{555B1E7D-E629-48A7-87A4-0AFBB69290FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B51555D3-6964-4C8F-80EE-7E53439D7CD8}"
+	ProjectSection(SolutionItems) = postProject
+		README = README
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

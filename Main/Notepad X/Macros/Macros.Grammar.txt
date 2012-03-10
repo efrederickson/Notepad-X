@@ -1,4 +1,6 @@
-﻿for <var=incrementer>, <int=max>, <int=incrementation> do
+﻿lame grammar that follows no rules
+
+for <var=incrementer>, <int=max>, <int=incrementation> do
 <statements>
 end
 
