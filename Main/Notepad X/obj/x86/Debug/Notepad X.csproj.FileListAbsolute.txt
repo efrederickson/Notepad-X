@@ -17,3 +17,5 @@ C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Fo
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Forms.OptionsForm.resources
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.Forms.HelpForm.resources
 C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\NotepadX.DefaultExtensions.RTFEditor.resources
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\GenerateResource.read.0.tlog
+C:\Users\elijah.FFHS2\Desktop\Notepad X\Main\Notepad X\obj\x86\Debug\GenerateResource.write.0.tlog

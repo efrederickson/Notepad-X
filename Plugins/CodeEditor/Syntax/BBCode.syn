@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="BBCode" Startblock="bbcode">
+<FileTypes>
+<FileType Extension=".bbc" Name="BBCode file" />
+</FileTypes>
+<Block Name="bbcode" EscapeChar="" IsMultiline="true" CaseSensitive="false">
+<Bracket Start="[" End="]" Style="BBCode2" />
+<Keywords>
+<PatternGroup Name="Keywords" Style="BBCode" NormalizeCase="true" CaseSensitive="false">
+<Patterns>
+b
+i
+u
+quote
+s
+table
+*
+th
+center
+email
+url
+gvideo
+youtube
+img
+li
+list
+ul
+ol
+sup
+sub
+tc
+th
+td
+color
+size
+</Patterns>
+</PatternGroup>
+</Keywords>
+<Operators>
+<PatternGroup name="Operators" Style="BBCodeOp">
+<Pattern Text="=" />
+</PatternGroup>
+</Operators>
+</Block>
+
+<Style Name="BBCode" ForeColor="Blue" BackColor="" Bold="false" Italic="false" Underline="false" />
+<Style Name="BBCode2" ForeColor="Red" BackColor="" Bold="false" Italic="false" Underline="false" />
+<Style Name="BBCodeOp" ForeColor="Red" BackColor="" Bold="false" Italic="false" Underline="false" />
+</Language>

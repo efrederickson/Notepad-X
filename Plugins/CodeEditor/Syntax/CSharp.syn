@@ -3,10 +3,6 @@
 <FileTypes>
 	<FileType Extension=".cs" Name="C# code file"/>
 </FileTypes>
-
-
-
-
 	<Block Name="CS Code" Style="CS Code" EscapeChar="" IsMultiline="true">
 		<Scope Start="{" End="}" Style="CS Scope" Text="{...}" CauseIndent="true" />
 		<Scope Start="#if" End="#endif" Style="CS Region" Text="#if...endif"  />

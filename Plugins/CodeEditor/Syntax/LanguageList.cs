@@ -17,7 +17,7 @@ namespace CodeEditor
         /// <summary>
         /// DO NOT INCLUDE THE .syn Extension!!
         /// </summary>
-        /// <param name="lang">The Language e.g. C# or VB.NET or Cobol</param>
+        /// <param name="lang">The Language e.g. CSharp or VBNET or Cobol</param>
         /// <returns></returns>
         private string GetSyntaxFileName(SyntaxLanguage lang)
         {
@@ -55,6 +55,7 @@ namespace CodeEditor
         {
             ASP,
             AutoIt,
+            BBCode,
             Cobol,
             CPP,
             //CS
